@@ -1,0 +1,186 @@
+* {margin: 0; padding: 0;}
+
+.cf::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+ul, li {list-style: none;}
+
+#wrap {
+    width: 100%;
+    height: auto;
+    border: 1px dotted red;
+}
+
+section {
+    width: 1070px;
+    height: 1020px;
+    margin: 50px auto;
+    border: 1px dotted green;
+}
+
+section h1 {
+    padding: 60px 0 30px 0;
+    font-weight: normal;
+}
+
+#content {
+    width: 1070px;
+    height: 900px;
+    position: relative;
+    border: 1px dotted red;
+}
+
+section h2 {
+    /* display: block; */
+    margin: 20px auto;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+/* --------------사진배치-------------- */
+
+#content div {
+    position: absolute;
+    /* opacity: 0.5; */
+}
+
+.img1 {
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 260px;
+}
+
+.img2 {
+    top: 0;
+    left: 270px;
+    width: 260px;
+    height: 530px;
+}
+
+.img3 {
+    top: 0;
+    right: 270px;
+    width: 260px;
+    height: 260px;
+}
+
+.img4 {
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 260px;
+}
+
+.img5 {
+    top: 270px;
+    left: 0;
+    width: 260px;
+    height: 260px;
+}
+
+.img6 {
+    top: 270px;
+    right: 0;
+    width: 530px;
+    height: 260px;
+}
+
+.img7 {
+    top: 540px;
+    left: 0;
+    width: 260px;
+    height: 260px;
+}
+
+.img8 {
+    top: 540px;
+    left: 270px;
+    width: 530px;
+    height: 260px;
+}
+
+.img9 {
+    top: 540px;
+    right: 0;
+    width: 260px;
+    height: 260px;
+}
+
+/* ----------------------------------- */
+/* ----------------호버--------------- */
+
+#content a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    background: rgba(0,0,255,0.7);
+    top: 0;
+    left: 0;
+    transition: all 0.2s;
+}
+
+#content .img6 a::before, #content .img8 a::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    background: rgba(0,0,255,0.7);
+    top: 0;
+    left: 0;
+    transition: all 0.2s;
+}
+
+#content a:hover::before {
+    width: 100%;
+}
+
+#content .img6 a:hover::before, #content .img8 a:hover::before {
+    height: 100%;
+}
+
+#content p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    padding-top: 30%;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    transition: all 0.5s;
+    opacity: 0;
+    font-size: 90%;
+    transform: translate(-10px,0);
+    background: url(../img/more.png) no-repeat 50% 75%;
+}
+
+#content .img6 p, #content .img8 p {
+    transform: translate(0,-10px);
+}
+
+#content .img2 p{
+    padding-top: 75%;
+    background: url(../img/more.png) no-repeat 50% 60%;
+}
+
+#content .img6 p, #content .img8 p{
+    padding-top: 15%;
+}
+
+#content a:hover p {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+#content a:active p {
+    transform: scale(1.1);
+}
+
+/* ----------------------------------- */

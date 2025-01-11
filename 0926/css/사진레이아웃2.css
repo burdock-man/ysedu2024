@@ -1,0 +1,46 @@
+* {margin: 0; padding: 0;}
+
+/* .cf::after{
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.wrap {
+    width: 1000px;
+    margin: 50px auto;
+    border: 1px dotted red;
+}
+
+h1 {
+    display: block;
+    width: 900px;
+    height: 100px;
+    line-height: 100px;
+    border: 1px dotted blue;
+    text-align: center;
+}
+.boxs {
+    position: relative;
+    width: 900px;
+    height: 200px;
+    border: 5px solid blue;
+}
+
+.box {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    border: 1px solid red;
+    box-sizing: border-box;
+    top: 25px;
+}
+
+/* .bigbox>div {
+    display: block;
+    width: 900px;
+    height: 200px;
+    border: 5px solid blue;
+    opacity: 0;
+} */
+

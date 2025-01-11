@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // ================================================================================
+
+        var number1 = [1,2,3,4,5];
+        var sum1 = 0;
+
+        for (var i = 0; i < number1.length; i++) {
+            sum1 = sum1 + number1[i];
+        }
+
+        document.write(sum1);
+
+
+        document.write("<br><br>") // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        var number2 = [1,2,3,4,5];
+        var sum2 = 0;
+
+        number2.forEach(function(우왕){
+            sum2 += 우왕;
+        });
+        document.write(sum2);
+
+
+    </script>
+
+    <style>
+        * {font-size: 20px; background: black; color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

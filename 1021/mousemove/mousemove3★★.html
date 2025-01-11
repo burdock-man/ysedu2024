@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+            document.addEventListener("mousemove", function(e){ // 마우스 무-부는 애지간해선 매개변수 붙여야함.
+                var x = e.pageX;
+                var y = e.pageY;
+                var element1 = document.querySelector("#m1");
+                var element2 = document.querySelector("#m2");
+                var element3 = document.querySelector("#m3");
+
+                element1.style.top = (y-20) + "px";
+                element1.style.left = x + "px";
+
+                element2.style.top = (y/2) + "px";
+                element2.style.left = (x/3) + "px";
+
+                element3.style.top = (y*2) + "px";
+                element3.style.left = (x*3) + "px";
+            });
+    </script>
+    <style>
+        body {background: black;}
+        #wrap {position: fixed;}
+        h1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            color: skyblue;
+        }
+
+        #m1 {
+            top: 50px;
+            left: 30px;
+        }
+        #m2 {
+            top: 300px;
+            left: 150px;
+        }
+        #m3 {
+            bottom: 80px;
+            left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="m1"><img src="img/1.png" alt=""></h1>
+        <h1 id="m2"><img src="img/2.png" alt=""></h1>
+        <h1 id="m3"><img src="img/3.png" alt=""></h1>
+        <!-- <h1 id="m4">0000</h1> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+* {margin: 0; padding: 0;}
+.bigbox {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 1px dotted #333;
+    margin: 100px auto; /*좌우 중앙정렬*/
+}
+
+.ear {
+    width:150px;
+    height: 150px;
+    border: 10px solid black;
+    background: #d59729;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+}
+
+.ear.left { left: 40px; }
+.ear.right { right: 40px; }
+
+.face {
+    position: absolute;
+    width: 500px;
+    height: 450px;
+    border-radius: 50%;
+    background: #d59729;
+    bottom: 0;
+    border: 10px solid black;
+    box-sizing: border-box;
+    /* 선 두께 포함해서 500*450 px */
+}
+
+.eyebrow {
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 7px;
+    background: black;
+    position: absolute;
+    top: 120px;
+}
+
+.eyebrow.left {
+    left: 100px;
+}
+
+.eyebrow.right {
+    right: 100px;
+}
+
+.eyeball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: black;
+    top: 190px;
+}
+
+.eyeball.left {
+    left: 135px;
+}
+
+.eyeball.right {
+    right: 135px;
+}
+
+.nose {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: black;
+    top: 230px;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 1;
+}
+
+.mouth {
+    width: 80px;
+    height: 74px;
+    border: 10px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: #fff;
+    position: absolute;
+    top: 240px;
+}
+
+.mouth.left {left: 175px;}
+.mouth.right {right: 175px;}
+
+.mouth_cover{
+    width: 60px;
+    height: 54px;
+    border: 0 solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: white;
+    position: absolute;
+    top: 250px;
+    left: 185px;
+}

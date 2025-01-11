@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+
+        $(function () {
+
+            var a0 = $("section > article").eq(0).offset().top;
+            var a1 = $("section > article").eq(1).offset().top;
+            var a2 = $("section > article").eq(2).offset().top;
+            var a3 = $("section > article").eq(3).offset().top;
+            console.log(a0, a1, a2, a3);
+
+            $(window).scroll(function () {
+                var sTop = Math.floor($(window).scrollTop());
+                $("#sTop").text(sTop);
+                if (sTop >= a0) {
+                    $("nav ul li").removeClass ("on");
+                    $("nav ul li").eq(0).addClass ("on");
+                }
+                if (sTop >= a1) {
+                    $("nav ul li").removeClass ("on");
+                    $("nav ul li").eq(1).addClass ("on");
+                }
+                if (sTop >= a2) {
+                    $("nav ul li").removeClass ("on");
+                    $("nav ul li").eq(2).addClass ("on");
+                }
+                if (sTop >= a3) {
+                    $("nav ul li").removeClass ("on");
+                    $("nav ul li").eq(3).addClass ("on");
+                }
+
+            });
+
+            $("nav ul li").click(function () {
+                var i = $(this).index();
+                var offset_t = $("section > article").eq(i).offset().top;
+
+                $("html, body").stop().animate({scrollTop : offset_t}, 500);
+                $("nav ul li").removeClass("on");
+                $(this).addClass("on");
+
+                return false;
+            });
+        });
+
+    </script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        a, h2, span {
+            text-decoration: none;
+            color : cornsilk;
+        }
+
+        h2 {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(50,50,50,0.6);
+        }
+
+        article {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #article1 {
+            background: tomato;
+        }
+
+        #article2 {
+            background: lightsalmon;
+        }
+
+        #article3 {
+            background: wheat;
+        }
+
+        #article4 {
+            background: cornsilk;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            height: 100px;
+            width: 100%;
+            background: rgba(255, 248, 220, 0.8);
+        }
+
+        nav ul {
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            width: 250px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 32px;
+            font-weight: bold;
+            /* background: cornsilk; */
+            color: tomato;
+            /* border: 5px solid tomato; */
+            border-radius: 80px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        nav ul li.on a {
+            /* background: lightsalmon; */
+            color: green;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="on"><a href="#article1">회사소개</a></li>
+            <li><a href="#article2">제품소개</a></li>
+            <!-- 앵커기능은 요즘엔 안씀. -->
+            <li><a href="#article3">커뮤니티</a></li>
+            <li><a href="#article4">다운로드</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <article id="article3"></article>
+        <article id="article4"></article>
+    </section>
+    <h2>현재스크롤위치 : <span id="sTop">0</span></h2>
+</body>
+</html>

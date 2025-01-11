@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style id="숙제1영역">
+            * {margin: 0; padding: 0;}
+            #wrap {
+                width: 1000px;
+                height: 650px;
+                margin: 0 auto;
+                margin-top: 50px;
+            }
+
+            header {
+                float: left;
+                width: 200px;
+                height: 650px;
+                background: tomato;
+            }
+
+            header h1 {
+                display: block;
+                text-align: center;
+                margin: 20px auto 30px;
+                font-weight: bold;
+                color: oldlace;
+            }
+
+
+
+
+
+
+
+
+            .gnb {
+                margin-left: 25px;
+                width: 150px;
+                border: 1px solid oldlace;
+            }
+
+            .gnb li {
+                position: relative;
+                display: block;
+                list-style: none;
+                text-align: center;
+            }
+
+            .gnb li a {
+                text-decoration: none;
+            }
+
+            .gnb>li>a {
+                display: block;
+                width: 150px;
+                height: 50px;
+                line-height: 50px;
+                color: oldlace;
+                font-weight: bold;
+                background: tomato;
+            }
+
+            .gnb li:hover>a {
+                border: 1px solid tomato;
+                color: tomato;
+                background: oldlace;
+                box-sizing: border-box;
+            }
+
+            li>ul>li>a {
+                display: block;
+                width: 150px;
+                height: 50px;
+                line-height: 50px;
+                margin: 10px;
+                color: tomato;
+                border: 1px solid tomato;
+                box-sizing: border-box;
+                background: oldlace;
+            }
+
+            li>ul {
+                display: none;
+                position: absolute;
+                left: 150px;
+                top: -75px;
+            }
+
+            li:hover>ul {
+                display: block;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            #main {
+                float: left;
+                width: 800px;
+                height: 650px;
+            }
+
+            #img_slide {
+                width: 800px;
+                height: 350px;
+                background: oldlace;
+            }
+
+            section {
+                width: 800;
+                height: 200px;
+            }
+
+            section>article {
+                width: 33.33%;
+                height: 200px;
+                float: left;
+            }
+
+            .notice {background: lightsalmon;}
+
+            .banner {background: wheat;}
+
+            .icons {background: lightsalmon;}
+
+            footer {
+                width: 800px;
+                height: 100px;
+            }
+
+            footer>article {
+                float: left;
+            }
+
+            .f_logo {
+                width: 33.33%;
+                height: 100px;
+                background: wheat;
+            }
+
+            .f_menu {
+                width: 66.66%;
+                height: 50px;
+                background: tomato;
+            }
+
+            .f_copy {
+                width: 66.66%;
+                height: 50px;
+                background: lightsalmon;
+            }
+    </style>
+    <style id="숙제2영역">
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header><h1>로고</h1>
+            <ul class="gnb">
+                <li><a href="#">MENU-1</a>
+                    <ul>
+                        <li><a href="#">submenu-1</a></li>
+                        <li><a href="#">submenu-2</a></li>
+                        <li><a href="#">submenu-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU-2</a>
+                    <ul>
+                        <li><a href="#">Submenu-1</a></li>
+                        <li><a href="#">Submenu-2</a></li>
+                        <li><a href="#">Submenu-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU-3</a>
+                    <ul>
+                        <li><a href="#">SUBMenu-1</a></li>
+                        <li><a href="#">SUBMenu-2</a></li>
+                        <li><a href="#">SUBMenu-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MENU-4</a>
+                    <ul>
+                        <li><a href="#">서브menu-1</a></li>
+                        <li><a href="#">서브menu-2</a></li>
+                        <li><a href="#">서브menu-3</a></li>
+                    </ul>
+                </li>
+            </ul></header>
+        <div id="main">
+            <div id="img_slide">
+                <!-- <img id="f1" src="images/f1.jpg" alt="" height="350">
+                <img id="f2" src="images/f2.jpg" alt="" height="350">
+                <img id="f3" src="images/f3.jpg" alt="" height="350">
+                <img id="f4" src="images/f4.jpg" alt="" height="350"> -->
+            </div>
+            <section>
+                <article class="notice"></article>
+                <article class="banner"></article>
+                <article class="icons"></article>
+            </section>
+            <footer>
+                <article class="f_logo"></article>
+                <article class="f_menu"></article>
+                <article class="f_copy"></article>
+            </footer>            
+        </div>
+    </div>
+</body>
+</html>

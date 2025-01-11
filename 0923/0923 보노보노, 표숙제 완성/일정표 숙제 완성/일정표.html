@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>schedule</title>
+    <style>
+        table {
+            margin: 50px auto;
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+            text-align: center;
+        }
+        h1 {
+            margin: 30px 0;
+        }
+        td {
+            border: 1px solid black;
+            padding: 20px 0;
+        }
+        #col3 {
+            text-align: left;
+            padding-left: 30px;
+        }
+        .list {
+            background: #bbb;
+            font-weight: bold;
+        }
+        #image {
+            position: absolute;
+            margin-top: 90px;
+            left: 50%;
+            margin-left: -340px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption><h1>일정표</h1></caption>
+        <colgroup>
+            <col style="width: 120px;">
+            <col style="width: 120px;">
+            <col style="width: 400px;">
+        </colgroup>
+        <tr class="list">
+            <td>날짜</td>
+            <td>시간</td>
+            <td>내용</td>
+        </tr>
+        <tr>
+            <td rowspan="3" class="list">5/11(토요일)</td>
+            <td>18:00</td>
+            <td id="col3">저녁식사</td>
+        </tr>
+        <tr>
+            <td>19:00</td>
+            <td id="col3">분과별 토의 주제 발표</td>
+        </tr>
+        <tr>
+            <td>20:30</td>
+            <td id="col3">휴식및 자유토론</td>
+        </tr>
+        <tr>
+            <td rowspan="3" class="list">5/12(일요일)</td>
+            <td>07:00</td>
+            <td id="col3">분임 토의 결과발표</td>
+        </tr>
+        <tr>
+            <td>08:00</td>
+            <td id="col3">아침식사</td>
+        </tr>
+        <tr>
+            
+            <td>09:30</td>
+            <td id="col3">추진계회 기예산 보고</td>
+        </tr>
+    </table>
+    <img id="image" src="image%20(2).png" alt="">
+</body>
+</html>

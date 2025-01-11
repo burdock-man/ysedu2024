@@ -1,0 +1,84 @@
+<!-- 참고사이트 : http://bhher1.dothome.co.kr/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        body {
+            background: teal;
+        }
+
+        .bigbox {
+            width: 395px;
+            height: 160px;
+            margin: 100px auto 0;
+        }
+
+        .boxButton {
+            float: left;
+            width: 25px;
+            height: 160px;
+            border-radius: 20px;
+            background: url(blue01.png) no-repeat center / cover;
+        }
+        .boxButton.over {
+            background: url(pink01.png) no-repeat center / cover;
+        }
+        .boxButton.selected {
+            background: url(orange01.png) no-repeat center / cover;
+        }
+
+        .selected+.boxImage {
+            width: 320px;
+        }
+
+        .boxImage {
+            float: left;
+            width: 0;
+            height: 160px;
+            transition: all 0.5s;
+            border-radius: 10px;
+        }
+        .image1 {
+            background: url(menuimg01.jpg) no-repeat center / 320px 100%;
+        }
+        .image2 {
+            background: url(menuimg02.jpg) no-repeat center / 320px 100%;
+        }
+        .image3 {
+            background: url(menuimg03.jpg) no-repeat center / 320px 100%;
+        }
+
+    </style>
+    <script>
+        $(function(){
+            $(".boxButton").eq(0).addClass("selected");
+
+            $(".boxButton").click(function(){
+                    $(".boxButton").removeClass("selected");
+                    $(this).addClass("selected");
+            });
+
+            $(".boxButton").hover(function() {
+                $(this).addClass("over");
+            }, function(){
+                $(this).removeClass("over");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="bigbox">
+        <div class="boxButton"></div>
+        <div class="boxImage image1"></div>
+        <div class="boxButton"></div>
+        <div class="boxImage image2"></div>
+        <div class="boxButton"></div>
+        <div class="boxImage image3"></div>
+    </div>
+</body>
+</html>

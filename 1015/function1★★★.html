@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #galleryZone {text-align: center;}
+
+    </style>
+
+</head>
+<body>
+    <div id="galleryZone">
+        <p><img src="images/pic_1.jpg" id="photo" alt=""></p>
+        <p class="buttons">
+            <button onclick="gallery(false)">이전</button>
+            <button onclick="gallery(true)">다음</button>
+        </p>
+    </div>
+</body>
+<script>
+    var num = 1;
+    function gallery(direct) { // direct = 0일 때 false , 1일 때 true
+        if (direct) {
+            if (num == 9) return; // num == 8 일 때 빠져나감 (동작을 안함)
+            num++;
+        } else {
+            if (num == 1) return;
+            num--;
+        }
+
+        var imgTag = document.querySelector('#photo');
+        // var img1 = imgTag.getAttribute('id');
+        // src, id, class, alt 의 내용을 불러옴.
+        // console.log(img1); 
+
+        // 불러올수도, 지정할수도 있는데,
+        // imgTag.setAttribute(지정항목, 지정내용)
+        imgTag.setAttribute('src',`images/pic_${num}.jpg`);
+        console.log(num);
+    }
+</script>
+</html>

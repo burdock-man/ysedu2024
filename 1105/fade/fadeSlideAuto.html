@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <!-- <link rel="stylesheet" href="css/fadeSlide.css"> -->
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #slider-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            max-width: 795px;
+            margin: auto;
+        }
+
+        .slider {
+            width: 100%;
+            
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            width: 100%;
+            transition: all 0.5s;
+        }
+
+        .slide.on {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .pager {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            /* z-index: 1; */
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 8px;
+            background: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: bacground 0.6s ease;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: red;
+        }
+
+        .dot:hover {
+            background: #717171;
+        }
+     </style>
+</head>
+<body>
+    <div id="slider-container">
+        <div class="slider">
+          <div class="slide fade on">
+            <img src="img/slide1.jpg" alt="Slide 1">
+          </div>
+          <div class="slide fade">
+            <img src="img/slide2.jpg" alt="Slide 2">
+          </div>
+          <div class="slide fade">
+            <img src="img/slide3.jpg" alt="Slide 3">
+          </div>
+        </div>
+    
+        <div class="pager">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+     </div>
+</body>
+</html>
+
+<script>
+    // document.addEventListener("DOMContentLoaded", function() {
+
+        let slideIndex = 1;
+
+        showSlides(slideIndex);
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.querySelectorAll(".slide");
+            const dots = document.querySelectorAll(".dot");
+
+            if(n > slides.length) {
+                slideIndex = 1;
+            }
+
+            for(i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("on");
+            }
+
+            for(i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+
+            slides[slideIndex - 1].classList.add("on");
+            dots[slideIndex - 1].classList.add("active");
+        }
+
+        let id;
+
+        function startAutoSlide() {
+            id = setInterval(function() {
+                plusSlides(1);
+            }, 1000);
+        }
+
+        startAutoSlide();
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+            // if (slideIndex)
+        }
+
+        function stopAutoSlide() {
+            clearInterval(id);
+        }
+
+        document.querySelector("#slider-container").addEventListener("mouseover", function() {
+            stopAutoSlide();
+        });
+
+        document.querySelector("#slider-container").addEventListener("mouseleave", function() {
+            startAutoSlide();
+        });
+
+    // });
+</script>

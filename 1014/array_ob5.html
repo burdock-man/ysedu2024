@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //학생 3명의 국영수 합계와 평균을 구하시오
+        var scores = [
+            [90, 80, 70], //학생1
+            [85, 95, 88], //학생2
+            [78, 92, 85]  //학생 3
+        ];
+
+
+        var ksum = 0;
+        var esum = 0;
+        var msum = 0;
+
+        //합계계산 
+        for (var i=0; i<scores.length;i++) {
+            ksum = ksum + scores[i][0];
+            esum = esum + scores[i][1];
+            msum = msum + scores[i][2];
+        }
+
+        document.write ("국어합계 : " + ksum + "<br>" + "국어평균 : " + Math.floor(ksum / scores.length) + "<br><br>" + "영어합계 : " + esum + "<br>" + "영어평균 : " + esum / scores.length + "<br><br>" + "수학합계 : " + msum + "<br>" + "수학평균 : " + msum / scores.length + "<br>")
+
+    </script>
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

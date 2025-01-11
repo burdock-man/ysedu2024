@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function changeBg(아무거나적어도상관없) {
+            var result = document.querySelector('#result');
+            result.style.backgroundColor = 아무거나적어도상관없
+        }
+        
+    </script>
+    <style>
+        * {list-style-type: none; text-decoration: none; }
+
+        ul {width: 500px; margin: 20px auto;}
+        
+        li {
+            display: inline-block; width: 120px; border: 1px solid #ccc; padding: 10px 15px;
+            font-size: 16px; text-align: center; 
+        }
+
+        #result {
+            width: 500px; height: 300px; margin: 30px auto; border: 2px solid #ccc; border-radius: 15px;
+        }
+
+        p {
+            width:80%; padding: 10px; line-height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBg('tomato')">TOMATO</a></li>
+        <li><a href="#" onclick="changeBg('lightsalmon')">LIGHTSALMON</a></li>
+        <li><a href="#" onclick="changeBg('wheat')">WHEAT</a></li>
+        <!-- 'tomato', 'lightsalmon', 'wheat'는 인수임. -->
+    </ul>
+    <div id="result"></div>
+</body>
+</html>

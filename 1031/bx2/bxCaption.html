@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css"> -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.js"></script>
+    <!-- <script src="js/jquery.bxslider.js"></script> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 960px;
+            height: 280px;
+            margin: 0 auto;
+            background: tomato;
+        }
+        section {
+            width: 960px;
+            height: 880px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 1px solid cornflowerblue;
+        }
+        p {
+            display: block;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        $(function() {
+
+            $(".bx3").bxSlider({
+                auto: true,
+                captions: true,
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <header>헤더</header>
+    <section>
+        <ul class="bx3">
+            <li><img src="img/images(1).jpg" title="<p>메인사진1</p>" alt=""></li>
+            <li><img src="img/images(2).jpg" title="<p>메인사진2</p>" alt=""></li>
+            <li><img src="img/images(3).jpg" title="<p>메인사진3</p>" alt=""></li>
+            <li><img src="img/images(4).jpg" title="<p>메인사진4</p>" alt=""></li>
+            <li><img src="img/images(5).jpg" title="<p>메인사진5</p>" alt=""></li>
+        </ul>
+    </section>
+</body>
+</html>

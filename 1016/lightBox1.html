@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lightBox1.css">
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+            <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+            <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li>
+            <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+            <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+            <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+    <div id="lightBox">
+        <img src="images/tree-1.jpg" alt="" id="lightBoxImage">
+    </div>
+</body>
+</html>
+
+<script>
+    var pics = document.querySelectorAll(".pic");
+    var lightBox = document.querySelector("#lightBox");
+    var lightBoxImage = document.querySelector("#lightBoxImage");
+
+    for(i=0; i<pics.length; i++) {
+        pics[i].addEventListener("click", showLightBox);
+    }
+    // pics 라는 변수에 여러 이미지가 있는 클래스 요소가 저장돼있고,
+    // 반복문을 통해 요소에 이벤트리스너를 추가.
+
+    // i=0부터 i=[pics.length]까지 반복하면서 배열처럼 클래스 요소에 pics[i]에 접근
+    // addEventListener("click", showLightbox); 를 통해 각 요소에 클릭이벤트를 추가
+    // 클릭시 showLightbox 라는 함수 실행.
+
+    function showLightBox () {
+
+        var bigLocation = this.getAttribute("data-src");
+        lightBoxImage.setAttribute("src", bigLocation);
+        lightBox.style.opacity = 1;
+
+    }
+
+
+    lightBox.onclick = function () {
+        lightBox.style.opacity = 0;
+    }
+</script>

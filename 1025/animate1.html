@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            $("#box1").stop().animate({
+                left:"300px",
+                width:"200px",
+                height:"200px",
+                opacity:"0.5",
+                fontSize:"30px",
+                lineHeight:"200px"
+            },2000).animate({
+                left:"0px",
+                width:"100px",
+                height:"100px",
+                opacity:"1",
+                fontSize:"20px",
+                lineHeight:"100px"
+            },2000);
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            color: cornsilk;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">박스1</div>
+</body>
+</html>

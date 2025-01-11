@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count = 0;
+
+        myFnc (); // 함수에 이름을 붙이면 호출을 먼저 해도 정의된 함수를 불러온다. 이걸 호이스팅이라고 카더라.
+
+        function myFnc() {
+            count++;
+            document.write("hello" + count ,"<br>");
+        }
+
+
+        // theFnc (); 근디 함수 자체를 변수로 선언하면 호이스팅이 안된다ㅋㅋ.
+
+        var theFnc = function() {
+            count++;
+            document.write("bye" + count, "<br>");
+        }
+
+        //함수는 메모리에 할당될 뿐, 호출을 하지 않으면 실행되지 않는다.
+
+        myFnc ();
+        theFnc ();
+
+
+        
+        // 리액트에선 일케함
+
+        //var theFnc = () => {
+        //     count++;
+        //     document.write("bye" + count, "<br>");
+        // }
+
+    </script>
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

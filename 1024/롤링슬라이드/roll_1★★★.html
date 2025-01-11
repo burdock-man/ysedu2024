@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            var num = 0;
+            var li_w = 80;
+            var copy1 = $("#banner li:lt(3)").clone();
+            $("#banner").append(copy1);
+            $(".next").click(function(){
+                if (num == 5) {
+                    num = 0;
+                    $("#banner").css("margin-left", "0px");
+                }
+                num++
+                $("#banner").stop().animate({"margin-left":-li_w*num},200);
+                    return false
+            });
+            $(".prev").click(function(){
+                if (num == 0) {
+                    num = 5;
+                    $("#banner").css("margin-left",-li_w*num);
+                }
+                num--
+                $("#banner").stop().animate({"margin-left":-li_w*num},200);
+                    return false
+            });
+
+
+            // 자동슬라이드
+
+            function autoPlay(){
+                if (num == 5) {
+                    num = 0;
+                    $("#banner").css("margin-left", "0px");
+                }
+                num++
+                $("#banner").stop().animate({"margin-left":-li_w*num},200);
+                    return false
+            }
+
+            setInterval(autoPlay, 2000);
+
+        });
+    </script>
+    <style>
+        *{margin: 0; padding: 0; background: black;}
+        ul {list-style: none;}
+        li {float: left; width: 80px;} /* 사진 한장의 크기는 72px, + margin 8px 합쳐서 li 너비는 80px */
+        a {text-decoration: none;}
+        h1 {text-align: center; color: skyblue; margin: 100px auto 20px;}
+
+        #banner_wrap {
+            width: 260px;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border: 1px solid skyblue;
+        }
+
+        #frame {
+            width:  232px;
+            height: 54px;
+            position: relative;
+            margin: 10px auto;
+            /* border: 1px solid tomato; */
+            overflow: hidden;
+        }
+
+        #banner {
+            width: 800px;
+            height: 54px;
+            background: tomato;
+        }
+
+        div p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="frame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/pic_t1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t5.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <p>
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼">
+            </a>
+        </p>
+    </div>
+</body>
+</html>
+
+<!-- <script>
+    var list = document.querySelector("#banner");
+    var listLi = document.querySelectorAll("#banner li");
+    var prev = document.querySelector(".prev");
+    var next = document.querySelector(".next");
+    var show_num = 3;
+    var total = listLi.length;
+    var li_width = 80;
+
+    for (var i = 0; i < 3; i++) {
+        var copyobj = listLi[i].cloneNode(true);.
+        list.append(copyobj);
+    }
+
+    var num = 0;
+
+    next.addEventListener("click", function(){
+        if (num==5) {
+            num = 0;
+            list.style.transition = "none";
+            list.style.marginLeft = 0;
+        }
+        setTimeout(function(){
+            num++;
+            list.style.transition = "margin-left 0.5s";
+            list.style.marginLeft = -li_width*num+"px";
+        },100);
+    });
+
+    function autoPlay () {
+        if (num==5) {
+            num = 0;
+            list.style.transition = "none";
+            list.style.marginLeft = 0;
+        }
+        setTimeout(function(){
+            num++;
+            list.style.transition = "margin-left 0.5s";
+            list.style.marginLeft = -li_width*num+"px";
+        },100);
+    }
+    setInterval(autoPlay, 5000);
+
+    prev.addEventListener("click", function(){
+        if (num==0) {
+            num = 5;
+            list.style.transition = "none";
+            list.style.marginLeft = -li_width*num+"px";
+        }
+        setTimeout(function(){
+            num--;
+            list.style.transition = "margin-left 0.5s";
+            list.style.marginLeft = -li_width*num+"px";
+        },100);
+    });
+</script> -->

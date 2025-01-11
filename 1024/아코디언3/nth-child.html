@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        ul li:nth-child(1){background-color: red;}
+        ul li:nth-child(2){background-color: cyan;}
+        /* nth-child는 ul의 전체에서 찾기때문에 h2가 첫번째로 인식되지만, li가 아니기 때문에 red가 적용 안됨. */
+
+        ul li:nth-of-type(2){background-color: yellow;}
+        /* 얘는 li의 2번째를 찾음. */
+    </style>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+    <ul>
+        <h2>메뉴선택</h2>
+        <li>회사소개</li>
+        <li>제품소개</li>
+        <li>커뮤니티</li>
+        <li>다운로드</li>
+    </ul>
+</body>
+
+</html>

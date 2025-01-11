@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function varExample(){
+            var x = 1; // var은 재할당, 재선언이 가능.
+            if (true){
+                var x = 2; // x 변수의 선언이 다시되었음. === 재선언
+                document.write(x, "<br>");
+            }
+            document.write(x, "<br>");
+        }
+
+        varExample();
+    </script>
+    <style>
+        *{font-size: 20px; color: skyblue; background: black;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

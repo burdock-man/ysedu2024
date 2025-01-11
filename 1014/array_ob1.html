@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [30, "따르릉", true];
+
+
+        document.write ("<h3>배열값 가져오기 1</h3>")
+        document.write(arr[0], "<br>")
+        document.write(arr[1], "<br>")
+        document.write(arr[2], "<br>")
+        // 하나씩 방 번호를 가져올수 있지만, 일일이 쳐야되고
+        // 많은 데이터를 접근해서 거시기 하려면 어렵다.
+
+        document.write("<br><br>")
+
+        document.write ("<h3>배열값 가져오기 2</h3>") //★★★★★★★★★★★이건꼭알아야된다함
+        for (var i=0; i<arr.length; i++) { //length == 배열의 갯수를 알아서 세서 i++하면 하나씩 다 출력 가능
+            document.write(arr[i], "<br>")
+        }
+
+        document.write("<br><br>")
+
+        document.write ("<h3>배열값 가져오기 3</h3>")
+        for (k in arr) { // arr라는 배열을 k로 풀어주는것. 근데 k라는 변수는 별도로 선언 안해도 되나?
+            document.write(arr[k], "<br>")
+        }
+
+        
+
+
+    </script>
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

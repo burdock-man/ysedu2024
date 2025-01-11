@@ -1,0 +1,58 @@
+<div class="quick_menu">
+    <div class="q_wrap">
+        <ul>
+            <li>
+                <a href="#">
+                    <span id="q_img1"></span>
+                    <p><strong>프렌차이즈</strong></p>
+                    <p>개설절차/투자비용 정보</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span id="q_img2"></span>
+                    <p><strong>지사안내</strong></p>
+                    <p>수도권/지방 지사정보</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span id="q_img3"></span>
+                    <p><strong>광고영상</strong></p>
+                    <p>TV광고/동영상</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span id="q_img4"></span>
+                    <p><strong>고객문의</strong></p>
+                    <p>자주하는 질문/1:1문의</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <div class="foot_wrap">
+        <div class="f_top">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">써브카드</a></li>
+                <li><a href="#">점주관리자</a></li>
+            </ul>
+        </div>
+        <div class="fage_info">
+            <p>서울시 서초구 강남대로 535 프린스빌딩 15층</p>
+            <p>대표 : INSOO CHO (인수조)</p>
+            <p>전화 : 02-797-5036</p>
+            <p>사업자등록번호 : 101-84-04143</p>
+            <p>SUBWAY® is a Registered Trademark of Subway IP LLC. © 2021 Subway IP LLC. All Rights Reserved.</p>
+        </div>
+        <div class="f_quick">
+            <a href="#" id="link_instar">인스타그램</a>
+            <a href="#" id="link_face">페이스북</a>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 2. 객체 해체
+
+        const person = {
+            name: "Alice",
+            age: 25,
+            country: "USA",
+        }
+        console.log(person.name); // 객체 해체를 안하면 log(객체.프로퍼티) 로 적어야됨.
+
+
+        const {name, age, country} = person; // 객체 해체
+        console.log(name); // 객체 해체를 하면 그냥 name값만 가져올수 있음.
+        console.log(person); // 근데 person 찍으면 다른 프로퍼티값 다 나옴. 해체란 뭘까....?
+
+
+
+        // 변수명 변경 및 기본값 설정
+
+        const user = {
+            username: "John Doe",
+            email: "john@exemple.com",
+        }
+
+        const {username:name1, email, phone = "N/A"} = user;
+
+        console.log(name1);
+        console.log(email);
+        console.log(phone);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

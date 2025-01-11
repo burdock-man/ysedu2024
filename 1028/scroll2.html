@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+
+            $(window).scroll(function () { // 화면 스크롤 이벤트
+                var scTop = $(window).scrollTop(); // $(this).scrollTop(); 과 같음. 스크롤이 위에서 떨어지는 만큼 ㅇㅇ
+                console.log(scTop);
+                $(".sTop").text(scTop);
+                $("")
+
+                if (scTop >= 10) {
+                    $(".box1").stop().animate({"left":"1400px","top":"200px"},800);
+                }
+                if (scTop >= 500) {
+                    $(".box2").stop().animate({"left":"1400px","top":"400px"},800);
+                }
+                if (scTop >= 1000) {
+                    $(".box3").stop().animate({"right":"1475px","top":"600px"},800);
+                }
+                if (scTop >= 1200) {
+                    $(".box4").addClass("on");
+                }
+            });
+
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 3000px;
+            background: black;
+        }
+
+        .sTop {
+            color: white;
+            font-size: 40px;
+            position: fixed;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            position: absolute;
+            /* transition: all 0.8s; */
+        }
+
+        .box1 {
+            background: tomato;
+            top : 600px;
+            left: -150px;
+        }
+
+        .box2 {
+            background: lightsalmon;
+            top : 1200px;
+            left: -150px;
+        }
+
+        .box3 {
+            background: wheat;
+            top: 1800px;
+            right: -200px;
+        }
+
+        .box4 {
+            background: cornsilk;
+            top: 2800px;
+            right: -200px;
+        }
+
+        .box4.on {
+            right: 1475px;
+            top: 800px;
+            transition: all 0.8s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="sTop">0</h1>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

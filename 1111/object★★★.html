@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const sam = {
+            name: "Sam",
+            info: {
+                age: "20",
+                class: "Javascript",
+            },
+        }
+        document.write(sam.name+"<br>");
+        document.write(sam.info.age+"<br>");
+        document.write(sam["info"].age+"<br>");
+        document.write(sam["info"]["age"]+"<br>");
+        
+        sam.etc = function () {
+            return "Bank!";
+        }
+
+        document.write(sam.etc()+"<br>")
+
+        delete sam.info;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

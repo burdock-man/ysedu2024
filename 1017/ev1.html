@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+    </script>
+    <style>
+        body{font-family: Arial, sans-serif; text-align: center; font-size: 20px; color: skyblue; background: black;}
+        .btn1 {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+            background-color: black;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btnAct {
+            background-color: skyblue;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn1">button1</div>
+</body>
+</html>
+
+<script>
+    var btn = document.querySelector(".btn1");
+    
+    btn.addEventListener("click", clickEvent);
+
+    function clickEvent () {
+        btn.classList.add("btnAct");
+    }
+
+    // function clickEvent () {
+    //     btn.classList.remove("btnAct");
+    // }
+</script>

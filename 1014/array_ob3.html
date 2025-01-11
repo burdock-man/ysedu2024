@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var greenArr = ["교대", "방배", "강남"];
+        var yellowArr = ["미금", "정자", "수서"];
+        
+        greenArr.splice (2, 1, "서초", "역삼"); // greenArr 의 "2"번째 배열에 "1"개를 삭제하고, "서초", "역삼"을 넣는다.
+        console.log (greenArr);
+
+        var data1 = yellowArr.pop ( ); // "pop"은 꺼낸다는 의미를 가짐. 저장된 데이터중 마지막 저장된 데이터를 삭제????
+        var data2 = yellowArr.shift ( ); //배열 첫번째 인덱스 삭제.
+        console.log(yellowArr);
+
+
+        yellowArr.push (data2); //yellowArr 배열 맨뒤에 data2를 밀어넣음.
+        console.log(yellowArr);
+
+        yellowArr.unshift (data1); //yellowArr 배열 맨앞에 data1를 밀어넣음.
+        console.log(yellowArr);
+
+        yellowArr.push (greenArr); //
+        console.log(yellowArr);
+    </script>
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

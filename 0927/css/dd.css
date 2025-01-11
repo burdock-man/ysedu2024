@@ -1,0 +1,42 @@
+
+.bigbox {
+    position: relative;
+    overflow: hidden;
+    width: 2000px;
+    height: 1000px;
+    top: 20%;
+    left: 20%;
+    border: 5px solid black;
+}
+
+.box1 {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    top: 0;
+    left: -600px;
+    background: tomato;
+    transform: skew(-20deg);
+}
+
+.sbbox {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    left: 1000px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 5px solid cyan;
+    box-sizing: border-box;
+}
+
+.smallbox {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 50%;
+    bottom: 50%;
+    background: tomato;
+    border: 5px solid black;
+    box-sizing: border-box;   
+}

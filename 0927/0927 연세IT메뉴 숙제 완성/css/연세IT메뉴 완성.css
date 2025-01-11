@@ -1,0 +1,178 @@
+/* 참고 사이트 : https://www.ysedu.or.kr/ */
+
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: #333;}
+.cf {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top-bar {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.top-bar ul {
+    position: absolute;
+    right: 160px;
+    line-height: 30px;
+    /* padding-right: 160px; */
+}
+
+.top-bar ul li {
+    font-size: 12px;
+    float: left;
+    margin-right: 20px;
+}
+
+nav {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logos {
+    position: relative;
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.logos>a:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.1);
+}
+.logos>a:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+
+.mainMenus {
+    position: relative;
+    width: 1404px;
+    height: 270px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mainMenus>li {
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mainMenus li a {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.mainMenus li ul {
+    position: absolute;
+    display: block;
+    height: 0;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.mainMenus li ul a{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.main1 {border-left: 1px solid #ccc;}
+
+.menuShadow {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    background: white;
+}
+
+nav:hover .menuShadow {
+    height: 230px;
+}
+
+nav:hover .mainMenus li ul {
+    height: 230px;
+}
+
+.mainMenus li ul a:hover{
+    color: red;
+}
+
+aside {
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: white;
+    top: 0;
+    right: 0;
+}
+
+aside {
+    position: fixed;
+    padding-right: 10px;
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+aside>img:first-child {
+    height: 150px;
+    width: 120px;
+}
+
+aside li {
+    text-align: center;
+    list-style: none;
+    font-size: 13px;
+    width: 120px;
+    background: royalblue;
+    line-height: 20px;
+    padding: 3px 0;
+    color: white
+}
+
+aside p {
+    margin: 10px 27px 0;
+    width: 55px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 23px;
+    padding: 10px 0;
+    color: #999;
+}
+
+section{
+    height: 8000px;
+    width: 1920px;
+    margin: 0 auto;
+}
+
+section img {
+    width: 1920px;
+}

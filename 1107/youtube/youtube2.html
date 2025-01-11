@@ -1,0 +1,61 @@
+<!-- https://youtu.be/ekr2nIex040?si=nsOge_XBeWfm7Wrm -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function() {
+
+            $(".photo").click(function() {
+
+                var videoSrc = $(".photo").attr("data-video");
+                var iframe = '<iframe width="690" height="388" src="' + videoSrc + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+
+                $(".u_apt").html(iframe);
+            });
+
+        });
+    </script>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .u_apt {
+            width: 100%;
+            position: relative;
+            padding-bottom: 56.25%;
+        }
+
+        .u_apt iframe {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+        }
+
+        .photo img {
+            position: absolute;
+            top: 0;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="u_apt">
+
+    </div>
+    <div class="photo" data-video="https://youtu.be/ekr2nIex040?si=VHuuhw45xHC5lWiN&autoplay=1">
+        <img src="img/watch.jpg" alt="사진">
+    </div>
+</body>
+</html>
+

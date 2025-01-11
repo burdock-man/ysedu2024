@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        header {
+            width: 100%;
+            max-width: 1920px;
+            height: 200px;
+            margin: 0 auto;
+            background: #ccc;
+        }
+
+        .slide-container {
+            max-width: 1920px;
+            height: 480px;
+            position: relative;
+        }
+
+        .slider {
+            /* width: 1920px; */
+            /* margin: 0 auto; */
+            display: flex;
+            transition: all 0.5s;
+            /* all 써도 되긴 하는데 움직이는것만 거시기 하려면 transform 속성값을 적는게 좋다. */
+            /* transform: translateX(-50%); */
+            /* overflow: hidden; */
+        }
+
+        button {
+            cursor: pointer;
+            /* pointer : 손꾸락 */
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="slide-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/slide1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="">
+            </div>
+        </div>
+        <button class="prev" onclick="slide(1)">Prev</button>
+        <button class="next" onclick="slide(-1)">Next</button>
+    </div>
+
+    <script>
+        const a = document.querySelector('.slider');
+        const b = document.querySelectorAll('.slide');
+
+        var num = 0;
+ 
+        function slide (a) {
+            if (a) {}
+
+
+
+        }
+
+
+
+
+        function showSlide (e) {
+
+            if (e < 0) {
+                c = 2;
+            } else if (e >= 3) {
+                c = 0;
+            } else {
+                c = e;
+            }
+            var d = -c * 100 + "%";
+            // alert(d);
+            a.style.transform = "translateX("+d+")";
+
+        }
+
+        function nextSlide () {
+            showSlide(c + 1);
+        }
+        function prevSlide () {
+            showSlide(c - 1);
+        }
+    </script>
+</body>
+</html>

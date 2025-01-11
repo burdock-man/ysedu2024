@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>DOM 공부합시다.</h1>
+        <a href="#" onclick="addP(); this.onclick='';">더보기</a>
+        <!-- this.onclick=''; 을 넣으면 한번만 실행됨. 내생각엔 addP()를 한번 실행하고 다시 ''으로 바꾼듯. -->
+        <!-- this를 빼도 작동은 됨. -->
+        <div id="info"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    function addP() {
+        var newP=document.createElement("p"); // 엘리멘트 노드 만들기 (<태그> 만드는거임 ㅇㅇ)
+        var txtNode = document.createTextNode("DOM은 문서 객체 모델입니다."); // 텍스트 노드 만들기
+        newP.appendChild(txtNode); // <태그>안에 텍스트노드를 집어넣겠다!
+        document.querySelector("#info").appendChild(newP); // 아까 집어넣은 녀석을 #info에 집어넣겠다.
+    }
+</script>

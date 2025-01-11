@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 함수스코프
+        function blockScope() {
+            let x = 10;
+            if(true) {
+                let x = 20; // 함수 블럭 안에서만 유효
+                console.log("블록 내부 x: ", x); // 20 출력
+            }
+            console.log("블록 외부 x: ", x); // 10 출력 (외부는 영향 안받음.)
+        }
+        blockScope();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

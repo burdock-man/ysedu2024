@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function(){
+            $(".tab li").click(function(){
+                var i = $(this).index(); // 클릭한 인덱스 번호를 변수 i에 대입~
+                $(".tab li").removeClass("on");
+                $(".tab_list div").removeClass("on");
+                $(".tab li").eq(i).addClass("on");
+                $(".tab_list div").eq(i).addClass("on");
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto 0;
+        }
+
+        .tab {
+            width: 300px;
+            list-style: none;
+            text-align: center;
+            height: 40px;
+            display: flex;
+        }
+        .tab li {
+            display: block;
+            width: 100px;
+            border-right: 1px dotted tomato;
+            box-sizing: border-box;
+            background: wheat;
+            line-height: 40px;
+            color: tomato;
+        }
+        .tab li:last-child {
+            border-right: none;
+        }
+        .tab li.on {
+            background: tomato;
+            font-weight: bold;
+            color: cornsilk;
+        }
+
+        .tab_list div {
+            width: 300px;
+            height: 260px;
+            padding: 20px;
+            color: cornsilk;
+            box-sizing: border-box;
+        }
+        .tab_list div {
+            background: wheat;
+            display: none;
+        }
+        .tab_list div.on {
+            background: tomato;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="tab">
+            <li class="on">1번</li>
+            <li>2번</li>
+            <li>3번</li>
+        </ul>
+        <div class="tab_list">
+            <div class="on">
+                <p>1번의 내용입니다.</p>
+                <p>1번의 내용입니다.</p>
+                <p>1번의 내용입니다.</p>
+            </div>
+            <div>
+                <p>2번의 내용입니다.</p>
+                <p>2번의 내용입니다.</p>
+                <p>2번의 내용입니다.</p>
+            </div>
+            <div>
+                <p>3번의 내용입니다.</p>
+                <p>3번의 내용입니다.</p>
+                <p>3번의 내용입니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

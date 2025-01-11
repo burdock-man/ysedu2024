@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+            var num = 0;
+
+            // autoCount ();
+
+            function autoCount () {
+                num++;
+                $(".count").text(num);
+            }
+
+            setInterval(autoCount, 1000);
+
+            function stop () {
+                clearInterval(autoCount);
+            }
+    </script>
+    <style>
+        /* * {
+            margin: ;
+            padding: ;
+        } */
+        
+        body {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="count">0</h1>
+    <button type="button" onclick="stop()">멈춰!</button>
+</body>
+</html>

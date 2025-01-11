@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/flex.css">
+    <style>
+        .flex-container {
+            width: 1500px;
+            height: 200px;
+            background: dodgerblue;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .flex-container>div {
+            background: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+        /* justify-content: center; 단점은 높이가 있을때 같이 길어진다. 그럴때는!! */
+        /* align-items: center; 를 입력하면 우아래를 거시기해준다. */
+        /* align-items: (stretch)(flex-start)(flex-end); 대충 알아들으면 될듯. stretch가 디폴트인가봄. */
+
+
+    </style>
+</head>
+<body>
+    <h1>Flexable Boxes</h1>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>

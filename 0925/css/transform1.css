@@ -1,0 +1,22 @@
+* {margin: 0; padding: 0;}
+
+h1 {width: 400px; height: 70px; margin-bottom: 20px; border: 3px solid #ccc; background: cornflowerblue;}
+p {font-size: 30px; padding-bottom: 30px; cursor: pointer;}
+/* cursor: pointer; - 커서를 변경. pointer는 손가락. */
+.tra {background: #ae5329; transform: translate(-410px,0); transition: all 0.5s;}
+.btn:active+.tra {transform: translate(0,0) ;}
+
+.rot1{margin: 200px 0; transform: rotate(0deg); transition: all 0.5s;}
+.btn2:active+.rot1 {transform: rotate(360deg);}
+
+.rot2{margin: 200px 0; transform: rotateY(0deg); transition: all 0.5s;}
+.btn3:active+.rot2 {transform: rotateY(360deg);}
+
+.rot3{margin: 200px 0; transform: rotateX(0deg); transition: all 0.5s;}
+.btn4:active+.rot3 {transform: rotateX(360deg);}
+
+.sca{margin: 200px 0; transform: scale(1) translate(0,0); transition: all 0.5s;}
+.btn5:active+.sca {transform: scale(2) translate(200px,0);}
+
+.ske{margin: 200px 0; transform: skewX(0deg); transition: all 0.5s;}
+.btn6:active+.ske {transform: skewX(90deg);}

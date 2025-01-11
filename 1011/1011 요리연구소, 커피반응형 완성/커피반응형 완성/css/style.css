@@ -1,0 +1,329 @@
+*{margin: 0;padding: 0;}
+
+/* ------------------------ 핸드폰용 ------------------------ */
+@media screen and (max-width:600px) {
+ 
+    .wrap{
+        width:100%;
+    }
+    header{
+        position: relative;
+        height:300px;
+        background:url('../images/top.jpg') no-repeat 0 0 / cover ;
+    } 
+    header h1{
+        position: absolute;
+        bottom:50px;
+        right:50px;
+        color:#fff;
+    }
+    nav{
+        width:100%;
+        height:auto;
+        background-color: #2a1d0a;
+        padding: 5px 0 20px;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    nav ul li{
+        margin-top: 15px;
+    }
+    nav ul li a{
+       display: block;
+       width:150px;
+       height:40px;
+       line-height: 40px;
+       color:#fff;
+       border: 1px solid #fff;
+       text-align: center;
+       border-radius: 20px;
+       text-decoration: none;
+       font-weight: bold;
+    }
+    nav ul li a:hover{
+        background-color: #fff;
+        color:#000;
+        text-decoration: underline;
+    }
+    .content{
+        height:550px;
+    }
+    section{
+        width:100%;
+        height:auto;
+        background-color: #ccc;
+        padding-bottom: 20px;
+    }
+    section h3{
+        padding: 20px 0 10px;
+        text-align: center;
+    }
+    section article{
+        width: 75%;
+        height:160px;
+        margin: 10px auto;
+        border: 1px solid #333;
+        padding: 10px;
+    }
+    article:hover{
+        background-color: rgba(223, 255, 211, 0.5);
+    }
+    article h4{
+        background: url(../images/kong.png) no-repeat 0 0;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+    article p{
+        line-height: 1.7em;
+        text-align: justify;
+    }
+    aside{
+        width:100%;
+        height:auto;
+        background-color:#726054;
+        text-align:center;
+        padding: 10px 0;
+    }
+    aside h3{
+        padding: 10px 0 20px;
+    }
+    aside img{
+        width:70%;
+        padding-bottom: 15px;
+    }
+    footer{
+        height:60px;
+        line-height: 60px;
+        background-color: #333;
+        color:#fff;
+        text-align: center;
+    }
+
+}
+
+
+
+/* ------------------------ 태블릿용 ------------------------ */
+@media screen and (min-width:601px) and (max-width:1023px) {
+ 
+    .wrap{
+        width:100%;
+        margin: 0 auto;
+    }
+    header{
+        position: relative;
+        height:300px;
+        background:url('../images/top.jpg') no-repeat 0 0 / cover ;
+    } 
+    header h1{
+        position: absolute;
+        bottom:50px;
+        right:50px;
+        color:#fff;
+    }
+    nav{
+        width:100%;
+        height:auto;
+        background-color: #2a1d0a;
+        padding: 5px 0 20px;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    nav ul li{
+        float: left;
+        margin-left: 25px;
+        margin-top: 15px;
+    }
+    nav ul li a{
+       display: block;
+       width:150px;
+       height:40px;
+       line-height: 40px;
+       color:#fff;
+       border: 1px solid #fff;
+       text-align: center;
+       border-radius: 20px;
+       text-decoration: none;
+       font-weight: bold;
+    }
+    nav ul li a:hover{
+        background-color: #fff;
+        color:#000;
+        text-decoration: underline;
+    }
+    .content{
+        height:550px;
+    }
+    section{
+        width:100%;
+        height:550px;
+        background-color: #ccc;
+        padding: 0 40px 0 80px;
+        box-sizing: border-box;
+    }
+    section h3{
+        padding: 20px 0 10px;
+        transform: translate(-40px,0);
+        text-align: center;
+    }
+    section article{
+        float: left;
+        width:40%; height:200px;
+        border: 1px solid #333;
+        padding: 10px;
+        margin: 10px 10px;
+    }
+    article:hover{
+        background-color: rgba(223, 255, 211, 0.5);
+    }
+    article h4{
+        background: url(../images/kong.png) no-repeat 0 0;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+    article p{
+        line-height: 1.7em;
+        text-align: justify;
+    }
+    aside{
+        width:100%;
+        height:auto;
+        background-color:#726054;
+        float:left;
+        text-align:center;
+    }
+    aside h3{
+        padding: 20px 0 10px;
+    }
+    aside img{
+        width:30%;
+        padding-bottom: 15px;
+    }
+    footer{
+        clear: both;
+        height:60px;
+        line-height: 60px;
+        background-color: #333;
+        color:#fff;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+/* ------------------------ 컴퓨터용 ------------------------ */
+@media screen and (min-width:1024px) {
+ 
+    .wrap{
+        width:900px;
+        margin: 0 auto;
+    }
+    header{
+        position: relative;
+        height:300px;
+        background:url('../images/top.jpg') no-repeat 0 0 / cover ;
+    } 
+    header h1{
+        position: absolute;
+        bottom:50px;
+        right:50px;
+        color:#fff;
+    }
+    nav{
+        width:900px;
+        height:70px;
+        background-color: #2a1d0a;
+    }
+    nav ul {
+        list-style: none;
+    }
+    nav ul li{
+        float: left;
+        margin-left: 25px;
+        margin-top: 15px;
+    }
+    nav ul li a{
+       display: block;
+       width:150px;
+       height:40px;
+       line-height: 40px;
+       color:#fff;
+       border: 1px solid #fff;
+       text-align: center;
+       border-radius: 20px;
+       text-decoration: none;
+       font-weight: bold;
+    }
+    nav ul li a:hover{
+        background-color: #fff;
+        color:#000;
+        text-decoration: underline;
+    }
+    .content{
+        height:550px;
+    }
+    section{
+        width:650px;
+        height:550px;
+        background-color: #ccc;
+        float:left;
+    }
+    section h3{
+        padding: 10px 0;
+        text-align: center;
+    }
+    section article{
+        width:270px; height:200px;
+        border: 1px solid #333;
+        float: left;
+        padding: 10px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    article:hover{
+        background-color: rgba(223, 255, 211, 0.5);
+    }
+    article h4{
+        background: url(../images/kong.png) no-repeat 0 0;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+    article p{
+        line-height: 1.7em;
+        text-align: justify;
+    }
+    aside{
+        width:250px;
+        height:550px;
+        background-color:#726054;
+        float:right;
+        text-align:center;
+    }
+    aside h3{
+        padding: 10px 0;
+    }
+    aside img{
+        width:220px;
+        padding-bottom: 15px;
+    }
+    footer{
+        clear: both;
+        height:60px;
+        line-height: 60px;
+        background-color: #333;
+        color:#fff;
+        text-align: center;
+    }
+
+}

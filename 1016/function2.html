@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 함수를 쓰는 이유 == 코드 재사용, 가독성 향상, 유지보수 용이, 추상화?
+        // [추상화] == 복잡한 내부구현을 숨기고 간단한 인터페이스만 제공
+ 
+        // 함수 기본형 == function 함수이름 (매개변수1, 매개변수2, ...) {동작;}
+        // function add (a,b) {return a+b;}
+        // function sub (c,d) {return c-d;}
+        // 함수를 만들어 놓으면 앞으로 필요할때마다 사용하기 용이.
+        // var result = add(3,5);
+        // var result = sub(9,5); 등등.
+
+
+        // 1. 기본함수 선언 ================================================================================
+
+
+        function greeting () {
+            document.write("안녕하세요");
+        }
+        greeting();
+
+
+        document.write("<br><br>") // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        function greet (name) {
+            return "hello, " + name + "!";
+        }
+        document.write(greet("최봉봉"));
+
+
+        document.write("<br><br>") // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        function greet1 (name) {
+            return "hello, " + name + "!";
+        }
+        var result = greet1("홍찰찰")
+        document.write(result);
+
+
+        document.write("<br><br>") // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+
+        // 2. 함수 표현식 ================================================================================
+
+
+        var square = function (x) { // 익명함수
+            return x*x ;
+        }
+        document.write(square(4)); // 16
+
+
+        document.write("<br><br>"); // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        var add = function (o,p) {
+            return o+p ;
+        }
+        document.write(add(3,4)); // 7
+
+
+        document.write("<br><br>"); // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        var add1 = (q,w) => { // 화살표 함수
+            return q+w
+        }
+        document.write(add1(6,8)); // 14
+
+
+        document.write("<br><br>"); // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+        var add1 = (e,r) => e+r; // 화살표 함수 간소화
+        document.write(add(5,6)); // 11
+
+        
+    </script>
+
+    <style>
+        * {font-size: 20px; background: black; color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

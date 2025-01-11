@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/coffee-pink.jpg" alt="Sample Image" class="myImage">
+</body>
+</html>
+<script>
+    const img = document.querySelector(".myImage");
+    img.setAttribute("src", "images/coffee-blue.jpg");
+    console.log(img.src); // "newImage.jpg" 출력
+    
+</script>

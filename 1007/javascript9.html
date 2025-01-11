@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+
+        num1--;
+        document.write (num1, "<br>")
+
+        num1++;
+        document.write (num1, "<br>")
+
+        result = num2++;
+        document.write (result, "<br>") // result = 20 먼저 대입되고 후에 ++가 연산된다. 결과값은 20이 나오지만, num2 메모리는 21을 갖고있다.
+
+        document.write (result, "<br>") // 근데 왜 이건 20이 뜨는겨?
+
+        document.write (num2, "<br>") // 이건 21이 뜨는데.
+
+        result = ++num2;
+        document.write (result, "<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

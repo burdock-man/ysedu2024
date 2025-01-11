@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // ================================================================================
+
+        var number1 = [1,2,3,4,5];
+        for (var i = 0; i < number1.length; i++) {
+            document.write(number1[i], "<br>");
+        }
+
+
+
+        document.write("<br><br>") // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+        
+        var number2 = [1,2,3,4,5]; // number2 배열 선언
+        number2.forEach(function(변수){ // forEach 매서드 실행
+            document.write(변수,"<br>"); // number2 배열을 순회 시작. (for문을 Each각각 반복한다.)
+        });
+
+
+    </script>
+
+    <style>
+        * {font-size: 20px; background: black; color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

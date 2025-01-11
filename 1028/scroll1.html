@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function () {
+
+            var atBox = $(".box1").offset().top; // offset() 은 number값을 가져옴.
+            var alBox = $(".box1").offset().left;
+            console.log(atBox);
+            console.log(alBox);
+            var btBox = $(".box2").offset().top;
+            var blBox = $(".box2").offset().left;
+            console.log(btBox);
+            console.log(blBox);
+            var ctBox = $(".box3").offset().top;
+            var clBox = $(".box3").offset().left;
+            console.log(ctBox);
+            console.log(clBox);
+            var dtBox = $(".box4").offset().top;
+            var dlBox = $(".box4").offset().left;
+            console.log(ctBox);
+            console.log(clBox);
+
+            var emBox = $(".box4").css("top","2300px"); // css("") 은 string값을 가져옴.
+            var etBox = $(".box4").css("top");
+            console.log(etBox);
+
+            var ftBox = parseInt($(".box4").css("top")); // css("")로 nuber값을 가져오려면 parseInt()를 써야함.
+            console.log(ftBox);
+            // $(".box2").
+            // $(".box3").
+            // $(".box4").
+
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: black;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .box1 {
+            background: tomato;
+            top : 300px;
+        }
+
+        .box2 {
+            background: lightsalmon;
+            top : 700px;
+            left: 150px;
+        }
+
+        .box3 {
+            background: wheat;
+            top: 1200px;
+            left: 300px;
+        }
+
+        .box4 {
+            background: cornsilk;
+            top: 1800px;
+            left: 575px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

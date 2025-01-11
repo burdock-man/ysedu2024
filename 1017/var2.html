@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function varExample(){
+            var x = 1; // var은 함수블럭내에서만 유효. 하지만 한 함수 안에 다른 중괄호를 넘나드는건 가능.
+            // 이 위치에 var x = 2; 넣는것이나 마찬가지다.
+            if (true){
+                var x = 2;
+                document.write(x, "<br>");
+            }
+            document.write(x, "<br>");
+        }
+
+        varExample();
+    </script>
+    <style>
+        *{font-size: 20px; color: skyblue; background: black;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

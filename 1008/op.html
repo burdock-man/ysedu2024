@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = '5';
+        var b = 5;
+
+        console.log (a==b);
+        console.log (a===b);
+
+
+
+        // 대입 연산자
+
+        var x = 10;
+        var y = 5;
+
+        x += y; // x = x + y >>> 15
+        x *= 2; // x = 15 * 2 >>> 30
+
+        console.log (x);
+
+
+
+        // 논리 연산자
+
+        var i = true;
+        var j = false;
+
+        console.log (i && j); // &&(and) 는 둘다 true 여야만 결과 값 true      // ( A >= 20 && A < 30 ) 식으로 20~30 사이에 있는 수를 구할 때도 거시기 함.
+        console.log (i || j); // ||(or) 는 둘중 하나만 true 여도 결과 값 true
+        console.log (!(i=b)); // !는 결과 값의 반대 값을 출력한다. false에 !를 붙이면 true. 아주 청개구리 새끼임. 허수 i랑 비슷한듯?
+
+
+
+        // 삼항 조건 연산자
+
+        let age = 20;
+        let message = age >= 18 ? "어덜뜨" : "애송이";
+
+        console.log (message);
+
+
+</script>
+
+    <style>
+        * { color: white;}
+        body {
+            background: darkslategrey;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

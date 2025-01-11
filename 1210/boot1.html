@@ -1,0 +1,49 @@
+<!-- 꾸글에다가 붓뜨스뜨랩 검색하고 사이트 들어가서 찾아보면 관련된 명령어? 클래스명 나옴. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--
+    container-fluid == 너비 100%
+    p-5 == 패딩 5
+    bg-primary == 백그라운드컬러 primary 푸른계열색 (붓뜨스뜨랩이 지정한 색임)
+    text-white == 글자색 흰색
+    text-center == 중앙정렬
+      -->
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1 class="text-black">나의 처음 붓뜨스뜨랩 페이지</h1>
+        <p>크기를 조정하면 반응형 웹사이트를 구경할 수 있습니다.</p>
+    </div>
+    <div class="container mt-5">
+        <!-- 
+        container 크기가 고정됨
+        mt-5 말쥔탑 5
+         -->
+        <div class="row">
+            <!-- col-sm-4 == container로 고정된 크기를 4/12해서 한 칸을 차지하는것. -->
+            <div class="col-md-4">
+                <h3>column 1</h3>
+                <p>붓뜨스뜨랩은 12개의 grid개수를 의미한다</p>
+                <p>지금은 컬럼의 크기는 4이다. 다시말하면 4/12 이다.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>column 2</h3>
+                <p>붓뜨스뜨랩은 12개의 grid개수를 의미한다</p>
+                <p>지금은 컬럼의 크기는 4이다. 다시말하면 4/12 이다.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>column 3</h3>
+                <p>붓뜨스뜨랩은 12개의 grid개수를 의미한다</p>
+                <p>지금은 컬럼의 크기는 4이다. 다시말하면 4/12 이다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</html>

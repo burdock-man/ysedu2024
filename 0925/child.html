@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ul li:first-child {background: #aaa;} */
+        /* li:first-child - li중 첫번째 자식만 #aaa 배경 */
+
+        /* ul li:last-child {background: yellow;} */
+        /* li:last-child - li중 마지막 자식만 yellow 배경 */
+
+        /* ul li:nth-child(3) {background: aqua;} */
+        /* li:nth-child(3) - li중 세번째 자식만 aqua 배경 */
+        
+        ul li:nth-child(odd) {background: aqua;}
+        /* li:nth-child(odd) - li중 홀수 자식만 aqua 배경 */
+
+        ul li:nth-child(even) {background: tomato;}
+        /* li:nth-child(even) - li중 짝수 자식만 tomat 배경 */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>첫번째</li>
+        <li>두번째</li>
+        <li>세번째</li>
+        <li>네번째</li>
+        <li>다섯번째</li>
+        <li>여섯번째</li>
+    </ul>
+</body>
+</html>

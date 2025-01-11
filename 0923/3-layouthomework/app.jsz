@@ -1,0 +1,8 @@
+const colorSwitch = document.querySelector("#header");
+const clicked = colorSwitch.addEventListener("click");
+
+if {
+    function (clicked) {
+        colorSwitch.style.background-color (tomato);
+    }
+}

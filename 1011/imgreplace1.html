@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImage(event) {
+            const image = event.target;
+            const currentSrc = image.src;
+
+            if (currentSrc.includes('over.jpg')) {
+                image.src = currentSrc.replace('over.jpg', 'out.jpg');
+            } else {
+                image.src = currentSrc.replace('out.jpg', 'over.jpg');
+            }
+        }
+
+        const images = document.querySelectorAll('img');
+        // <img> 요소에 클릭 이벤트 리스터 추가
+        images.forEach((image) => {image.addEventListener('click', changeImage)});
+        // img 4개 변수 images 변수에 넣고
+    </script>
+    <style>
+        .bigbox {width: 1000px; display: flex; justify-content: space-between;}
+        .bigbox img {width: 240px;}
+    </style>
+</head>
+<body>
+    <h2>사진</h2>
+    <div class="bigbox">
+        <div class="box box1">
+            <img src="images/img1over.jpg" alt="">
+        </div>
+        <div class="box box2">
+            <img src="images/img2over.jpg" alt="">
+        </div>
+        <div class="box box3">
+            <img src="images/img3over.jpg" alt="">
+        </div>
+        <div class="box box4">
+            <img src="images/img4over.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

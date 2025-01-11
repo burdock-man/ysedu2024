@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {font-size: 20px; background: black; color: skyblue;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="images/cup-1.png" alt="" id="cup">
+    </div>
+</body>
+</html>
+
+<script>
+    var cup = document.querySelector("#cup");
+    cup.onclick = changePick;
+    function changePick(){
+        alert("띠용");
+    }
+</script>

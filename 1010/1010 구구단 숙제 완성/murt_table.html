@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 1;
+        var t = "<table border = '1'>" + "<td colspan='9'>" + "<strong>" +"Multiplication Table" + "</strong>" + "</td>" + ""
+
+        for (var c = 1; c <= 9; c++) {
+
+            t += "<tr>"
+                
+                for (var r = 1; r <= 1; r++) {
+                    t += "<td>" + "1×" + num + "= " + (1 * num) + "</td>";
+                    t += "<td>" + "2×" + num + "= " + (2 * num) + "</td>";
+                    t += "<td>" + "3×" + num + "= " + (3 * num) + "</td>";
+                    t += "<td>" + "4×" + num + "= " + (4 * num) + "</td>";
+                    t += "<td>" + "5×" + num + "= " + (5 * num) + "</td>";
+                    t += "<td>" + "6×" + num + "= " + (6 * num) + "</td>";
+                    t += "<td>" + "7×" + num + "= " + (7 * num) + "</td>";
+                    t += "<td>" + "8×" + num + "= " + (8 * num) + "</td>";
+                    t += "<td>" + "9×" + num + "= " + (9 * num) + "</td>";
+                    num++
+                }
+            
+                t += "</tr>";
+
+        }
+
+        t += "</table>"
+        
+        document.write (t);
+
+    </script>
+
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue; padding: 10px; text-align: center;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

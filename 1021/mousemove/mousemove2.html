@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer> // e는 이벤트 객체. 순간순간 정보를 받아야함. 근데 마우스의 좌표를 받아야한다면 무조건 적어줘야함.
+        document.onmousemove = function (e) { // 페이지를 열었을 때 마우스가 페이지보다 늦게 움직이니까 html이 먼저 읽히게 된다.
+            var x  = e.pageX; // client와 page는 비슷하지만, 다른 점이 있다면
+            var y  = e.pageY; // client는 절대좌표 / page는 상대좌표?
+
+            document.querySelector("#m1").innerHTML = x;
+            document.querySelector("#m2").innerHTML = y;
+        }
+    </script>
+    <style>
+        #wrap {position: fixed;}
+        body {height: 3000px; background: black;}
+        h1 {color: skyblue;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="m1">0000</h1>
+        <h1 id="m2">0000</h1>
+    </div>
+</body>
+</html>

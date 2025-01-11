@@ -1,0 +1,149 @@
+* {margin: 0; padding: 0;}
+
+/* body {
+    height: 3000px;
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 50%;
+    margin-left: -100px;
+    border: 5px solid tomato;
+    background: rgba(253, 245, 230, 0.85);
+    box-sizing: border-box;
+}
+
+.box.box1 {
+    margin-left: -400px;
+}
+
+.box.box2 {
+    position: fixed;
+    margin-left: 200px;
+} */
+
+#wrap {
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* background; */
+}
+
+#logo {
+    float: left;
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: tomato;
+}
+
+nav {
+    float: right;
+    margin: 20px 0;
+}
+
+.mainMenu li {
+    list-style: none;
+    margin-top: 4px;
+    margin-right: 25px;
+    /* box-sizing: border-box; */
+}
+
+.mainMenu>li {
+    float: left;
+}
+
+.mainMenu li a {
+    display: block;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border: 2px solid tomato;
+    border-radius: 20px;
+    text-decoration: none;
+    color: tomato;
+    font-weight: bold;
+    background-color: oldlace;
+}
+
+.mainMenu li ul {
+    display: none;
+    position: absolute;
+}
+
+.mainMenu li:hover ul {
+    display: block;
+}
+
+#img_slide {
+    width: 100%;
+    height: 300px;
+    background: oldlace;
+}
+
+section {
+    width: 100%;
+    height: 200px;
+}
+
+section article {
+    float: left;
+}
+
+.notice {
+    width: 400px;
+    height: 200px;
+    background: lightsalmon;
+}
+
+.banner {
+    width: 400px;
+    height: 200px;
+    background: wheat;
+}
+
+.icons {
+    width: 400px;
+    height: 200px;
+    background: lightsalmon;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: tomato;
+}
+
+footer>div {
+    float: left;
+    box-sizing: border-box;
+}
+
+.f_logo {
+    height: 100px;
+    width: 300px;
+    background: tomato;
+}
+
+.f_menu {
+    height: 50px;
+    width: 900px;
+    background: oldlace;
+}
+
+.f_copy {
+    height: 50px;
+    width: 900px;
+    background: lightsalmon;
+}

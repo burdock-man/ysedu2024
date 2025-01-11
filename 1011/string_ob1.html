@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var t = "Hello Thank you good luck to you";
+        // 인덱스 번호
+        // H=0 , e=1 , l=2 , l=3 , o=4 , ....
+
+        document.write('"Hello Thank you good luck to you"',"<br>");
+
+        document.write("<br>", "--------------------------------", "<br><br>");
+
+        document.write(t.charAt(16),"<br>"); // t의 인덱스 번호 16번째 글자 출력
+        document.write(t.indexOf("you"),"<br>"); // "you"의 인덱스 번호를 추출.
+        document.write(t.indexOf("you",16),"<br>"); // 인덱스 번호 16번째 이후의 "you"를 찾아 번호를 추출.
+        document.write(t.lastIndexOf("you"),"<br>");
+        document.write(t.lastIndexOf("you", 25),"<br>");
+
+        document.write("<br>", "--------------------------------", "<br><br>");
+
+        document.write(t.match("luck"),"<br>");
+        document.write(t.search("you"),"<br>");
+        document.write(t.substr(21, 4),"<br>");  // 인덱스 번호 21번부터 4개의 문자.
+        document.write(t.substring(6,12),"<br>"); // 인덱스 번호 6번부터 12번 전까지(11번까지임)
+
+        document.write("<br>", "--------------------------------", "<br><br>");
+
+        document.write(t.replace("you","me"),"<br>"); // "you"를 "me"로 바꿔줌. 근데 제일 먼저 찾은 문자를 거시기 함.
+        document.write(t.toLowerCase(),"<br>");
+        document.write(t.toUpperCase(),"<br>");
+        document.write(t.length,"<br>"); // t의 인덱스번호 길이를 알려줌.
+
+        document.write("<br>", "--------------------------------", "<br><br>");
+
+        var s = t.split(" "); // " " 공백을 기준으로 단어 분할
+        document.write(s[0], "<br>");
+        document.write(s[4], "<br>");
+
+        document.write("<br>", "--------------------------------", "<br><br>");
+
+        var str = "A";
+        var t = str.charCodeAt(0); // A를 아스키 코드값으로 반환
+        document.write(t, "<br>");
+        document.write(String.fromCharCode(65), "<br>"); // 아스키 코드값 65에 해당하는 문자로 반환
+    </script>
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

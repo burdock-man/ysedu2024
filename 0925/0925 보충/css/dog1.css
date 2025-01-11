@@ -1,0 +1,32 @@
+* {margin: 0; padding: 0;}
+
+.wrap {width: 900px; margin: 0 auto;}
+
+.header {background: #f46075; height: 200px;}
+
+.header h1 {float: left; color: white; margin: 70px 0 0 50px;}
+.header img {float: right; margin: 30px 30px 0 0;}
+
+.nav {height: 50px; background: #ddd;}
+
+.nav ul {list-style: none;}
+
+.nav li {float: left; width: 25%; text-align: center; line-height: 50px;}
+
+.nav a {display: block; width: 100%; height: 50px; text-decoration: none; color: #333; font-weight: bold;}
+.nav a:hover {background: #f46075; color: white;}
+
+.contents {width: 900px; height: 520px;}
+
+.section {width: 650px; height: 520px; float: left; background: #eee;}
+.side {width: 250px; height: 520px; float: right; background: #876547;}
+.footer {height: 60px; line-height: 60px; background: #333; color: white; text-align: center;}
+
+.section h2 {text-align: center; padding: 10px 0;}
+.section .box {width: 270px; height: 190px; border: 1px solid #333; background: #fff; float: left; padding: 10px; margin: 0 0 15px 20px;}
+.box h3 {text-align: center; padding-bottom: 10px;}
+.box p {font-size: 13px; text-align: justify;}
+
+.side {text-align: center;}
+.side h2 {text-align: center; padding-top: 10px; color: white;}
+.side img{margin-top: 10px;}

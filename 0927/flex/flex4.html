@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/flex.css">
+    <style>
+        .flex-container {
+            width: 1500px;
+            height: 200px;
+            background: dodgerblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container>div {
+            background: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flexable Boxes</h1>
+    <div class="flex-container">
+        <div style="flex-grow: 3;">1</div>
+        <div style="flex-grow: 99;">2</div>
+        <div style="flex-grow: 2;">3</div>
+
+        <!-- <div style="flex-grow: 5;"> 태그에 flex-grow: n;을 입력하면 n만큼 비율을 맞춰 늘려준다. -->
+
+    </div>
+</body>
+</html>

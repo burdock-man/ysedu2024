@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <style>
+        body {
+            background: black;
+            display: flex;
+            justify-content: center;
+        }
+        .outBox {
+            width: 250px;
+            height: 250px;
+            margin: 100px 0;
+        }
+        .outBox1 {
+            background: tomato;
+        }
+        .outBox2 {
+            background: cornflowerblue;
+        }
+        .inBox1 {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            /* opacity: 0.5; */
+        }
+
+        .inBox2 {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            /* opacity: 0.5; */
+        }
+
+        .box1 {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 15px white;
+            background: white;
+        }
+        .box2 {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            box-shadow: 0 0 100px 50px cyan;
+            mix-blend-mode:overlay;
+        }
+
+        .box3 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 15px white;
+            background: white;
+        }
+        .box4 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 0 100px 50px yellow;
+            mix-blend-mode:overlay;
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".inBox").draggable();
+        });
+    </script>
+</head>
+<body>
+    <div class="outBox outBox1">
+        <div class="inBox inbox1">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+    <div class="outBox outBox2">
+        <div class="inBox inbox2">
+            <div class="box3"></div>
+            <div class="box4"></div>
+    </div>
+    </div>
+</body>
+</html>

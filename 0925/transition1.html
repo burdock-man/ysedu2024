@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .abigbox {width: 1000px; height: 250px; border: 5px solid tan; margin: 30px auto;}
+        .abigbox h2 {padding: 15px; text-align: center;}
+        .abox {position: relative; width: 200px; height: 150px; border: 1px solid red; float: left; margin-left: 40px;}
+        /* .abox img{display: block;} */
+        .sun {width: 200px; height: 150px; position: absolute; top: 0; left: 0; transition: all 0.5s;}
+        .abox:hover .sun {background: rgba(0, 0, 0, 0.4);}
+        .moon {width: 200px; height: 150px; position: absolute; top: 0; left: 0; transition: all 0.5s;}
+        .abox2:hover .moon {background: rgba(255,255,255,0.4);}
+</style>
+</head>
+<body>
+    <div class="abigbox">
+        <h2>입양합시다.</h2>
+        <div class="abox abox1">
+            <img src="images/d1.jpg" alt="갱얼쥐1">
+            <p class="sun"></p>
+        </div>
+        <div class="abox abox2">
+            <img src="images/d2.jpg" alt="갱얼쥐2">
+            <p class="moon"></p>
+        </div>
+        <div class="abox abox3">
+            <img src="images/d3.jpg" alt="갱얼쥐3">
+            <p class="sun"></p>
+        </div>
+        <div class="abox abox4">
+            <img src="images/d4.jpg" alt="갱얼쥐4">
+            <p class="sun"></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    /* color: ; */
+}
+
+.menu_wrap {
+    position: fixed;
+    width: 780px;
+    height: 400px;
+    top: 20px;
+    left: 20px;
+}
+
+.menu_wrap ul .logo {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: url(../img/우엉남\ 로고.png) no-repeat center / cover;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.menu_wrap ul .logo:hover {
+    transform: scale(1.1);
+}
+
+
+.menu_wrap ul li a{
+    display: block;
+    float: left;
+    width: 150px;
+    height: 50px;
+    margin: 25px 0 0 20px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu_wrap ul li.on a{
+    background: white;
+    color: black;
+}
+
+.scroll_left {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.contents_wrap {
+    width: 400%;
+    height: 100vh;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.cont1 {
+    background: teal;
+}
+.cont2 {
+    background: peru;
+}
+.cont3 {
+    background: lightslategray;
+}
+.cont4 {
+    background: palevioletred;
+}

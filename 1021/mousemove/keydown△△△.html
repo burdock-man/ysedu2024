@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #cat-container {
+            position: relative;
+        }
+
+        #cat {
+            width: 100px;
+            position: absolute;
+            transition: trasform 0.3s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cat-container">
+        <img src="img/1.png" alt="Funny Cat" id="cat">
+    </div>
+</body>
+</html>
+
+<script>
+    const cat = document.querySelector("#cat");
+    document.addEventListener("keydown", function(event){
+        console.log(event.key); // 키보드 입력한게 콘솔창에 입력됨. 콘솔로그 말고 움직이게 할수도 있다.
+    });
+
+    function moveCat (direction) {
+        const step = 20;
+
+        switch(direction) {
+            case "ArrowUp" : cat.style.transForm = `translateY(-${step}px)`;
+            break;
+            case "ArrowDown" : cat.style.transForm = `translateY(${step}px)`;
+            break;
+            case "ArrowRight" : cat.style.transForm = `translateX(${step}px)`;
+            break;
+            case "ArrowLeft" : cat.style.transForm = `translateX(-${step}px)`;
+            break;
+        }
+    }
+
+</script>

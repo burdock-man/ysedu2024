@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>DOM 공부합시다.</h1>
+        <a href="#" onclick="addP(); this.onclick='';">더보기</a>
+        <!-- this.onclick=''; 을 넣으면 한번만 실행됨. 내생각엔 addP()를 한번 실행하고 다시 ''으로 바꾼듯. -->
+        <!-- this를 빼도 작동은 됨. -->
+        <div id="info"></div>
+    </div>
+</body>
+</html>
+
+<script>
+    function addP() {
+        var newP=document.createElement("p"); // 엘리멘트 노드 만들기 (<태그> 만드는거임 ㅇㅇ)
+        var txtNode = document.createTextNode("DOM은 문서 객체 모델입니다."); // 텍스트 노드 만들기
+        newP.appendChild(txtNode); // <태그>안에 텍스트노드를 집어넣겠다!
+
+        var newImg = document.createElement("img"); // <img>태그를 만들겠다!
+        var srcNode = document.createAttribute("src"); // <img>에 들어갈 속성 src를 만들겠다! (아직 안들어감)
+        var altNode = document.createAttribute("alt"); // <img>에 들어갈 속성 alt를 만들겠다! (아직 안들어감)
+        srcNode.value = "images/dom.jpg"; // src의 값을 작성하는것.
+        altNode.value = "돔 트리 예제 이미지"; // alt의 값을 작성하는것.
+        newImg.setAttributeNode(srcNode); // 방금 만든 속성을 집어넣는거임.
+        newImg.setAttributeNode(altNode); // 이놈도 마찬가지
+
+        document.querySelector("#info").appendChild(newP); // 아까 집어넣은 녀석을 #info에 집어넣겠다.
+        document.querySelector("#info").appendChild(newImg);
+    }
+
+    // 선생님 예제 --------------------------------------------- 오타때문에 내께 안되서 가져온거임. 오타좀 조심하자.
+    // function addP(){
+    //         var newP = document.createElement("p");
+    //         var txtNode = document.createTextNode("Dom은 Document object Model의 준말");
+    //         newP.appendChild(txtNode);
+
+    //         var newImg = document.createElement("img");
+    //         var srcNode = document.createAttribute("src");
+    //         var altNode = document.createAttribute("alt");
+    //         srcNode.value = "images/dom.jpg";
+    //         altNode.value="돔 트리 예제 이미지";
+    //         newImg.setAttributeNode(srcNode);
+    //         newImg.setAttributeNode(altNode);  
+
+    //         document.getElementById("info").appendChild(newP);
+    //         document.getElementById("info").appendChild(newImg);
+    //     }
+
+</script>

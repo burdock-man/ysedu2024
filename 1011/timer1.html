@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // window.onload = function () {} 중괄호 안에 감싸면 html과 css가 모두 로드된 후 실행.
+        window.onload = function () {
+            autoTime(); //첨부터 0000 안보이고싶으면 함수를 먼저 한번 불러오면 됨 ㅋㅋ
+            setInterval(autoTime, 1000);
+            function autoTime () {
+
+                var toDay = new Date ();
+                //alert(toDay);
+                var y = toDay.getFullYear();
+                var m = toDay.getMonth()+1;
+                var d = toDay.getDate();
+                var yoil = toDay.getDay(); //요일. 0==일 , 1==월 , ... 식으로 가기 때문에 숫자를 글자로 바꿔줄 필요가 있.
+                var n;
+                if(yoil == "0") {
+                    n = "일";
+                } else if (yoil == "1") {
+                    n = "월";
+                } else if (yoil == "2") {
+                    n = "화";
+                } else if (yoil == "3") {
+                    n = "수";
+                } else if (yoil == "4") {
+                    n = "목";
+                } else if (yoil == "5") {
+                    n = "금";
+                } else if (yoil == "6") {
+                    n = "토";
+                }
+                var h = toDay.getHours();
+                var min = toDay.getMinutes();
+                var s = toDay.getSeconds();
+
+                // document.write (y + "년 " + m + "월 " + d + "일 " + n + "요일 " + h + "시 " + min + "분 " + s + "초 ", "<br>");
+                // document.write (`${y}년 ${m}월 ${d}일 ${n}요일 ${h}시 ${min}분 ${s}초`)
+
+                document.querySelector('#year').innerHTML = y;
+                document.querySelector('#month').innerHTML = m;
+                document.querySelector('#date').innerHTML = d;
+                document.querySelector('#day').innerHTML = n;
+                document.querySelector('#hour').innerHTML = h;
+                document.querySelector('#minutes').innerHTML = min;
+                document.querySelector('#seconds').innerHTML = s;
+
+            }
+        }
+</script>
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue;}
+    </style>
+</head>
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="day">0</span>요일
+        <span id="hour">00</span>시
+        <span id="minutes">00</span>분
+        <span id="seconds">00</span>초
+    </h1>
+</body>
+</html>

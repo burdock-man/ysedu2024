@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 넘기기</title>
+    <style>
+    *{margin:0; padding:0;}
+    img{vertical-align:top; border:0;}
+    #galleryWrap {width: 530px; margin: 0 auto; text-align:  center;}
+    #galleryWrap img {vertical-align: middle;}
+    a{text-decoration: none;}
+    </style>
+
+</head>
+
+<script>
+
+    var num = 1;
+
+    function nextGallery () {
+        if (num == 7) {
+            num = 0;
+        }
+        num++;
+        var galleryImg = document.querySelector('#gallery');
+        galleryImg.setAttribute('src', `images/img${num}.jpg`);
+    }
+
+    function prevGallery () {
+        if (num == 1) {
+            num = 8;
+        }
+        num--;
+        var galleryImg = document.querySelector('#gallery');
+        galleryImg.setAttribute('src', `images/img${num}.jpg`);
+    }
+
+
+</script>
+
+<body>
+    <div id="galleryWrap">
+        <h1>이미지 넘기기</h1>
+        <a href="#prev" onclick="return prevGallery()">
+            <img src="images/left_btn.png" alt="이전그림">
+        </a>
+        <img src="images/img1.jpg" alt="갤러리그림" id="gallery">
+        
+        <a href="#next" onclick="return nextGallery()"> 
+            <!-- 이거 리턴은 왜 붙는거지?↑ -->
+            <img src="images/right_btn.png" alt="다음그림">
+        </a>
+    </div>
+</body>
+
+</html>

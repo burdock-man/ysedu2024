@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 1;
+        var t = "<table border = '1'><td colspan='8'><strong>Multiplication Table Vertical</strong></td>";
+
+        for (var r = 1; r <= 9; r++) {
+            t += "<tr>";
+                for (var d = 2; d <= 9; d++) {
+                    t += "<td>" + d + "×" + num + "= " + (d * num) + "</td>";
+                }
+                num++
+                t += "</tr>";
+        }
+        t += "</table>"
+
+        document.write (t);
+    </script>
+
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue; padding: 10px; text-align: center;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

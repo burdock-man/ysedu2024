@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    setInterval(auto_time, 1000);
+
+    function auto_time () {
+
+        var today = new Date ();
+
+        var nowYear = today.getFullYear ();
+        var nowMonth = today.getMonth () + 1;
+        var nowDate = today.getDate ();
+        var nowDay = today.getDay ();
+        var nowHours = today.getHours ();
+        var nowMinutes = today.getMinutes ();
+        var nowSeconds = today.getSeconds ();
+
+        var yoil;
+
+        if (nowDay == '0') {
+            yoil = "일";
+        } else if (nowDay == '1') {
+            yoil = "월";
+        } else if (nowDay == '2') {
+            yoil = "화";
+        } else if (nowDay == '3') {
+            yoil = "수";
+        } else if (nowDay == '4') {
+            yoil = "목";
+        } else if (nowDay == '5') {
+            yoil = "금";
+        } else if (nowDay == '6') {
+            yoil = "토";
+        }
+
+        document.getElementById("year").innerHTML = nowYear;
+        document.getElementById("month").innerHTML = nowMonth;
+        document.getElementById("date").innerHTML = nowDate;
+        document.getElementById("day").innerHTML = yoil;
+        document.getElementById("hour").innerHTML = nowHours;
+        document.getElementById("minutes").innerHTML = nowMinutes;
+        document.getElementById("seconds").innerHTML = nowSeconds;
+
+    }
+    </script>
+    <style>
+        * {background: black; font-size: 25px; color: skyblue; border-color: skyblue;}
+        h1 {border: 2px solid; padding: 20px; margin: 0 auto; text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>
+        <span id="year">0000</span>년
+        <span id="month">00</span>월
+        <span id="date">00</span>일
+        <span id="day">0</span>요일
+        <span id="hour">00</span>시
+        <span id="minutes">00</span>분
+        <span id="seconds">00</span>초
+    </h1>
+</body>
+</html>

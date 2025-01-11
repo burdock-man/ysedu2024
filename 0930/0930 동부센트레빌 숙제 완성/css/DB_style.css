@@ -1,0 +1,222 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+.cf::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Main Container */
+.bigbox {
+    position: relative;
+    width: 1400px;
+    height: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+/* Navigation */
+nav {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    top: -700px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+nav ul {
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+nav ul li {
+    float: left;
+    width: 160px;
+    text-align: center;
+    line-height: 70px;
+}
+
+nav > ul > li > a {
+    display: block;
+    height: 70px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+nav > ul > li > a::before, nav ul li ul a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transform: translateX(-50%);
+    transition: all 0.8s;
+}
+
+nav > ul > li > a::before {
+    background: white;
+}
+
+nav ul li ul a::before {
+    background: aqua;
+}
+
+nav > ul > li > a:hover::before {
+    width: 160px;
+}
+
+nav ul li ul a:hover::before {
+    width: 100%;
+}
+
+nav ul li ul a:hover {
+    color: aqua;
+}
+
+nav ul li ul a {
+    display: block;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    color: white;
+    margin-top: 5px;
+    position: relative;
+}
+
+nav ul li ul {
+    height: 0;
+    transition: height 0.5s;
+}
+
+nav ul:hover li ul {
+    height: 400px;
+}
+
+/* Box Shadow Effect */
+.box-shadow {
+    z-index: 1;
+    position: absolute;
+    width: 1400px;
+    height: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #042e6f;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+nav:hover + .box-shadow {
+    opacity: 1;
+    height: 350px;
+}
+
+/* Background Image */
+.background-img {
+    position: absolute;
+    width: 1400px;
+    height: 700px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: changeBackground 14s infinite;
+}
+
+@keyframes changeBackground {
+    0% {
+        background: url(../images/visualimg_1_1920.jpg) no-repeat center / cover;
+    }
+    50% {
+        background: url(../images/visualimg_2_1920.png) no-repeat center / cover;
+    }
+    100% {
+        background: url(../images/visualimg_3_1920.jpg) no-repeat center / cover;
+    }
+}
+
+/* Boxes */
+.box_left1, .box_right1,
+.box_left2, .box_right2,
+.box_left3, .box_right3 {
+    position: absolute;
+}
+
+.box_left1, .box_right1 {
+    width: 170px;
+    height: 70px;
+    top: 0;
+}
+
+.box_left1 {
+    left: 30px;
+    background: #042e6f;
+}
+
+.box_right1 {
+    right: 30px;
+    background: #f2f2f2;
+}
+
+.box_left2, .box_right2 {
+    width: 30px;
+    height: 670px;
+}
+
+.box_left2 {
+    left: 0;
+    background: #042e6f;
+}
+
+.box_right2 {
+    right: 0;
+    background: #f2f2f2;
+}
+
+.box_left3, .box_right3 {
+    width: 50%;
+    height: 30px;
+    bottom: 0;
+}
+
+.box_left3 {
+    left: 0;
+    background: #042e6f;
+}
+
+.box_right3 {
+    right: 0;
+    background: #f2f2f2;
+}
+
+/* Login Box */
+#login_box li a {
+    display: block;
+    float: left;
+    width: 80px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+#login_box li i {
+    font-size: 17px;
+    margin-right: 8px;
+}

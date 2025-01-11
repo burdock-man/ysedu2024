@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 사용자의 이름을 입력받아 인사하는 프로그램
+
+        var userName = prompt("이름을 입력하세요.", "홍길ㄷ오");
+
+        document.write ("반갑습니다 " + userName + "님ㅋㅋ<br>");
+        document.write (`반갑습니다 ${userName}님ㅋㅋ<br><br>`);
+
+
+    
+        // 배열에 숫자 저장하기
+
+        var numbers = [1, 2, 3, 4, 5];
+
+        document.write(numbers+"<br>");
+        document.write(numbers[0]+"<br>");
+        document.write(numbers[1]+"<br>");
+        document.write(numbers[2]+"<br>");
+        document.write(numbers[3]+"<br>");
+        document.write(numbers[4]+"<br><br>");
+
+        
+        var i = 0 // for 문의 초깃값을 먼저 적어봄 ㅇㅇ
+
+        for (; i < numbers.length ; i++) { // 먼저 선언한 변수가 있다면 반드시 초깃값, 조건식, 증감식이 붙지 않아도 된다.
+            document.write (numbers[i] + "<br>"); // 단, 초깃값,조건식,증감식에대한 구분은 필요하기 때문에 ;세미콜론은 붙여야함.
+        }
+    </script>
+
+    <style>
+        * {font-size: 20px; background: black; color: skyblue;}
+        
+    </style>
+
+</head>
+<body>
+    
+</body>
+</html>

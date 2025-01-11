@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <!-- <script src="http://api.openweathermap.org/data/2.5/forecast?id=1835553&appid=50254f5853cf9aac7e28b27480c4c4d4&units=metric"></script> -->
+    <script>
+        $(function() {
+
+            // $.getJSON("날씨(경로)", function(data){
+            //     data 할일
+            // });
+
+            $.getJSON("https://api.openweathermap.org/data/2.5/forecast?id=1835553&appid=50254f5853cf9aac7e28b27480c4c4d4&units=metric", function(data){
+                // alert(data.cod);
+                // alert(data.city.name);
+                // alert(data.list[1].main.temp);
+                var $ctemp = data.list[0].main.temp;
+                var $maxTemp = data.list[0].main.temp_max;
+                var $minTemp = data.list[0].main.temp_min;
+                var $cDate = data.list[0].dt_txt;
+                var $wIcon = data.list[0].weather[0].icon;
+                // alert($wIcon);
+                $(".ctemp").append($ctemp);
+                $(".clowtemp").append($minTemp);
+                $(".chightemp").append($maxTemp);
+                $(".cicon").append(`<img src="https://openweathermap.org/img/wn/${$wIcon}@2x.png" alt="">`);
+                $("h2").prepend($cDate);
+                // var $now = new Date();
+                // var $cDate = $now.getFullYear() + "/" + ($now.getMonth()+1) + "/" + $now.getDate();
+                // $("img").prop("src", `https://openweathermap.org/img/wn/${$wIcon}@2x.png`);
+
+            });
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <h1>Weather api</h1>
+    <h2> - 날씨예보</h2>
+    <div class="ctemp">현재온도 : </div>
+    <div class="clowtemp">최저온도 : </div>
+    <div class="chightemp">최고온도 : </div>
+    <div class="cicon">아이콘</div>
+    <!-- <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""> -->
+</body>
+</html>

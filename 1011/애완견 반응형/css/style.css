@@ -1,0 +1,333 @@
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: black;}
+
+/* 핸드폰용 */
+@media screen and (max-width:600px) {
+    #wrapper {
+        width: 100%;
+        background: oldlace;
+    }
+    
+    header {
+        height: 150px;
+        background: #f46075 url(../images/nav2.png) no-repeat 95% 50% / 120px;
+        border-top: 1px solid transparent;
+    }
+    
+    header h1 {
+        color: white;
+        font-weight: bold;
+        margin: 20px 0 0 20px;
+    }
+    
+    nav {
+        height: 100px;
+        background: #aaa;
+    }
+    
+    nav ul li {
+        float: left;
+        width: 50%;
+        margin: 8px 0 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        margin: 0 auto;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    nav ul li a:hover {
+        background: #f46075;
+        border-radius: 18px;
+        color: white;
+    }
+    
+    section {
+        width: 100%;
+        height: auto;
+        background: tomato;
+        padding: 10px 0;
+    }
+    
+    section article p {
+        font-size: 12px;
+    }
+    
+    section h2 {
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    aside {
+        width: 100%;
+        height: auto;
+        background: oldlace;
+        padding: 10px 0;
+    }
+    
+    section article {
+        width: 85%;
+        height: auto;
+        border: 1px solid #333;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    
+    section article h3 {
+        padding-bottom: 10px;
+    }
+    
+    aside {
+        text-align: center;
+    }
+    
+    aside h3 {
+        margin-top: 10px;
+    }
+    
+    aside img {
+        width: 75%;
+        height: auto;
+        margin-top: 10px;
+    }
+    
+    footer {
+        clear: both;
+        height: 50px;
+        line-height: 50px;
+        background: #333;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+
+/* 태블릿용 */
+@media screen and (min-width:601px) and (max-width:1023px) {
+    #wrapper {
+        width: 580px;
+        margin: 0 auto;
+        background: oldlace;
+    }
+    
+    header {
+        height: 160px; /* 스마트폰에선 120 */
+        background: #f46075 url(../images/nav2.png) no-repeat 95% 50% / 25%;
+        border-top: 1px solid transparent;
+    }
+    
+    header h1 {
+        color: white;
+        font-weight: bold;
+        margin: 50px 0 0 50px;
+    }
+    
+    nav {
+        height: 50px;
+        background: #aaa;
+    }
+    
+    nav ul li {
+        float: left;
+        margin: 8px 0 0 15px;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    nav ul li a:hover {
+        background: #f46075;
+        border-radius: 18px;
+        color: white;
+    }
+    
+    section {
+        padding: 10px 0;
+        width: 100%;
+        height: 500px;
+        background: tomato;
+    }
+    
+    section article p {
+        font-size: 12px;
+    }
+    
+    section h2 {
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    aside {
+        padding: 5px 0;
+        width: 100%;
+        background: oldlace;
+    }
+    
+    section article {
+        width: 220px;
+        height: 180px;
+        border: 1px solid #333;
+        padding: 10px;
+        margin-bottom: 15px;
+        float: left;
+        margin-left: 30px;
+    }
+    
+    section article h3 {
+        padding-bottom: 10px;
+    }
+    
+    aside {
+        text-align: center;
+    }
+    
+    aside h3 {
+        margin-top: 10px;
+    }
+    
+    aside img {
+        margin-top: 10px;
+    }
+    
+    footer {
+        clear: both;
+        height: 50px;
+        line-height: 50px;
+        background: #333;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+
+
+/* 꼼퓨타용 */
+
+@media screen and (min-width:1024px) {
+    #wrapper {
+        width: 800px;
+        margin: 0 auto;
+        background: oldlace;
+    }
+    
+    header {
+        height: 205px;
+        background: url(../images/nav2.png) no-repeat 95% 50% #f46075;
+        border-top: 1px solid transparent;
+        /* transparent = 투명선 */
+    }
+    
+    header h1 {
+        color: white;
+        font-weight: bold;
+        margin: 50px 0 0 50px;
+        /* padding: 50px 0 0 50px; */
+    
+        /* 마진 병합 현상 (html+css 교과서 319p) */
+        /* 부모, 자식 둘 다 블럭요소일 경우 발생. */
+        /* 자식(h1)한테 바로 margin-top을 줬을 때, 부모한테 margin-top이 들어간다..*/
+        /* float: left; 하면 h1이 block요소로 인식이 안되서 정상적으로 margin-top이 먹음. */
+        /* 1. header h1에 margin-top 대신 padding-top으로 대체 */
+        /* 2. header h1에 float left */
+        /* 3. 부모와 자식을 구분할수 있는 border top을 부모에게 준다. */
+    }
+    
+    nav {
+        height: 50px;
+        background: #aaa;
+    }
+    
+    nav ul li {
+        float: left;
+        /* margin-left: ; */
+        margin: 8px 0 0 40px;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 140px;
+        height: 35px;
+        line-height: 35px;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    nav ul li a:hover {
+        background: #f46075;
+        border-radius: 18px;
+        color: white;
+    }
+    
+    section {
+        float: left;
+        width: 550px;
+        height: 500px;
+        background: tomato;
+    }
+    
+    section article p {
+        font-size: 12px;
+    }
+    
+    section h2 {
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    aside {
+        float: left;
+        width: 250px;
+        height: 500px;
+        background: oldlace;
+    }
+    
+    section article {
+        width: 220px;
+        height: 180px;
+        border: 1px solid #333;
+        padding: 10px;
+        margin-bottom: 15px;
+        float: left;
+        margin-left: 20px;
+    }
+    
+    section article h3 {
+        padding-bottom: 10px;
+    }
+    
+    aside {
+        text-align: center;
+    }
+    
+    aside h3 {
+        margin-top: 10px;
+    }
+    
+    aside img {
+        margin-top: 10px;
+    }
+    
+    footer {
+        clear: both;
+        height: 50px;
+        line-height: 50px;
+        background: #333;
+        color: #fff;
+        text-align: center;
+    }
+}

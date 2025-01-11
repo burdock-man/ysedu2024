@@ -1,0 +1,30 @@
+* {margin: 0; padding: 0;}
+
+.wrap {position: relative; width: 830px; height: 310px; margin: 10px auto; border: 1px dotted black;}
+
+.box {position: absolute; width: 200px; height: 150px;}
+.box img {display: block;}
+
+.box1 {left: 0; top: 0;}
+.box1::after {position: absolute; content: ''; width: 0; height: 100%; left: 0; top: 0; background: rgba(255, 99, 71, 0.6); transition: all 0.5s;}
+.box1:hover:after {width: 100%;}
+
+.box2 {left: 0; bottom: 0;}
+.box2::after {position: absolute; content: ''; width: 0; height: 100%; left: 0; top: 0; background: rgba(255, 99, 71, 0.6); transition: all 0.5s;}
+.box2:hover:after {width: 100%;}
+
+.box3 {left: 210px; top: 0; width: 200px; height: 310px;}
+.box3::after {position: absolute; content: ''; width: 0; height: 100%; left: 0; top: 0; background: rgba(255, 99, 71, 0.6); transition: all 0.5s;}
+.box3:hover:after {width: 100%;}
+
+.box4 {right: 210px; top: 0;}
+.box4::after {position: absolute; content: ''; width: 0; height: 100%; left: 0; top: 0; background: rgba(255, 99, 71, 0.6); transition: all 0.5s;}
+.box4:hover:after {width: 100%;}
+
+.box5 {right: 0; top: 0;}
+.box5::after {position: absolute; content: ''; width: 0; height: 100%; left: 0; top: 0; background: rgba(255, 99, 71, 0.6); transition: all 0.5s;}
+.box5:hover:after {width: 100%;}
+
+.box6 {right: 0; bottom: 0; width: 410px; height: 150px;}
+.box6::after {position: absolute; content: ''; width: 100%; height: 0; left: 0; top: 0; background: rgba(255, 99, 71, 0.6); transition: all 0.5s;}
+.box6:hover:after {height: 100%;}

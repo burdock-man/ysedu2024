@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+    <style>
+        body {height: 3000px;}
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: magenta;
+        }
+        .box2 {
+            background-color: yellow;
+        }
+        .box3 {
+            position: absolute;
+            background-color: cyan;
+            right: 50px;
+            bottom: 50px;
+        }
+        .box4 {
+            background-color: #000;
+            color: white;
+        }
+        /* 
+        absolute
+        1. 자리값이 없다. (원래 자리 뺏김)
+        2. top, left, bottom, right 이동 가능
+        3. 부모에 relative 주어 기준을 변경 가능 
+        4. relative 주어진 부모 도큐멘트가 없으면 브라우저 기준 이동
+        5. absolute가 부모라면 absolute를 기준으로 이동
+        */
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

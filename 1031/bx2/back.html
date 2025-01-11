@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css"> -->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.js"></script>
+    <!-- <script src="js/jquery.bxslider.js"></script> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+            background: tomato;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .back1 {
+            width: 117px;
+            height: 183px;
+            background: url(img/friends.jpg) no-repeat -260px -183px;
+            border: 1px solid #333;
+            transition: transform 0.5s;
+            margin: 140px 5px;
+        }
+        .back1:hover {
+            background: url(img/friends.jpg) no-repeat -260px 0;
+            transform: scale(1.2);
+        }
+        .back2 {
+            width: 117px;
+            height: 183px;
+            background: url(img/friends.jpg) no-repeat -635px -183px;
+            border: 1px solid #333;
+            transition: transform 0.5s;
+            margin: 140px 5px;
+        }
+        .back2:hover {
+            background: url(img/friends.jpg) no-repeat -635px 0;
+            transform: scale(1.2);
+        }
+
+
+    </style>
+    <script>
+        $(function() {
+
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="back1"></div>
+        <div class="back2"></div>
+    </header>
+    </section>
+</body>
+</html>

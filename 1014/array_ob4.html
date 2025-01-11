@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var days = ["일", "월", "화", "수", "목", "금", "토"]; // 0, 1, 2, 3, 4, ...
+
+        var today = new Date ();
+        // var day = today.getDay();
+        // var yoil = days[day];
+        var yoil = days[today.getDay()];
+        document.write (yoil+"요일 <br/>");
+
+        document.write (today.getDay(), "<br>"); // 월요일 1 출력
+
+        document.write ("<br><br>");
+
+        // 전체 은행 잔고
+        var money = [1000, 2000, 500, 10000, 7500];
+        var total = 0;
+
+        for (var i=0; i < money.length; i++ ) {
+            // document.write(money[i], "<br>");
+            total = total + money[i];
+        }
+        document.write(total - money[2]);
+
+    </script>
+    <style>
+        * {background: black; font-size: 20px; color: skyblue; border-color: skyblue;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

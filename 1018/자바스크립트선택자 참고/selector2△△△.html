@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        const element1 = document.querySelector(".myDiv"); // 첫 번째 myDiv 요소 선택
+        const element2 = document.querySelectorAll(".myDiv"); // 이건 All을 선택했기 때문에 전체 myDiv 선택
+        console.log(element1.textContent, "<br>"); // "First Div" 출력
+
+        for(var i=0;i<element2.length;i++){
+            document.write(element2,"<br><br>");
+        }
+
+    </script>
+</head>
+<body>
+    <div class="myDiv">First Div</div>
+    <div class="myDiv">Second Div</div>
+</body>
+</html>

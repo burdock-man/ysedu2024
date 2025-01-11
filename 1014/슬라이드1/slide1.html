@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        header {
+            width: 100%;
+            max-width: 1920px;
+            height: 200px;
+            margin: 0 auto;
+            background: #ccc;
+        }
+
+        .slide-container {
+            max-width: 1920px;
+            height: 480px;
+            position: relative;
+        }
+
+        .slider {
+            /* width: 1920px; */
+            /* margin: 0 auto; */
+            display: flex;
+            transition: all 0.5s;
+            /* all 써도 되긴 하는데 움직이는것만 거시기 하려면 transform 속성값을 적는게 좋다. */
+            /* transform: translateX(-50%); */
+            /* overflow: hidden; */
+        }
+
+        button {
+            cursor: pointer;
+            /* pointer : 손꾸락 */
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="slide-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/slide1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">Prev</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        // 첫번째 일치하는 요소 .slider 한개밖에 없으므로 한개만 선택
+        const slides = document.querySelectorAll('.slide');
+        // "querySelectorAll"<<< 모든 .slide 세개 다 선택. 만약 "querySelector"를 썼으면 가장 첫번째것만 뽑힘.
+
+        var currentIndex = 0;
+
+
+        function showSlide (index) {
+
+            if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else if (index >= slides.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            var transformValue = -currentIndex * 100 + "%";
+            // alert(transformValue);
+            slider.style.transform = "translateX("+transformValue+")";
+
+
+        }
+
+
+
+        function nextSlide () {
+            showSlide(currentIndex + 1);
+        }
+        function prevSlide () {
+            showSlide(currentIndex - 1);
+        }
+    </script>
+</body>
+</html>

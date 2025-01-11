@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for (var i = 1; i <= 10; i++) {
+            if (i % 2 != 0) {
+                document.write(i, "<br>");
+            }
+        }
+
+        document.write("<br>")
+
+        for (var i = 1; i <= 10; i++) {
+            if (i % 2 == 0) continue; // continue는 조건에 충족되면 다시 해당 for문의 처음으로 돌아감.
+            document.write("안녕하세요" + i, "<br>");
+        }
+
+        document.write("<br>")
+
+        for (var i = 1; i <= 10; i=i+2) {
+                document.write(i, "<br>");
+        }
+
+    </script>
+        <style>
+            * {background: black; font-size: 20px; color: skyblue; border-color: skyblue; padding: 10px;}
+        </style>
+</head>
+<body>
+    
+</body>
+</html>

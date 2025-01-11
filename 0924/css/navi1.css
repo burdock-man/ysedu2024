@@ -1,0 +1,46 @@
+* {margin: 0; padding: 0;}
+
+ul {list-style: none;}
+
+#container {
+    width: 800px;
+}
+
+#header {
+    height: 70px;
+}
+
+/* ★★★">" .one 바로 밑에 li만 선택★★★ */
+.one>li {
+    float: left;
+}
+
+.one li {
+    background: cornflowerblue;
+}
+
+.one li a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.one li ul {
+    display: none;
+    position: absolute;
+    /* position: absolute;를 준 이유는
+    ul이 블록요소로 들어가서 다른 요소를 밀어냄 */
+}
+
+/* hover 넣고 자식 넣어도 가능 */
+.one>li:hover ul {
+    display: block;
+}
+
+.one li:hover a/*:hover*/ {
+    background: skyblue;
+}

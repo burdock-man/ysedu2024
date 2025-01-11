@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var id = "malbin1";
+        var pw = "1234";
+        var user = "성빈";
+
+        var user_id = prompt ("아이디 입력", "malbin1");
+
+        if (id == user_id) {
+            var user_pw = prompt ("비밀번호 입력", "1234");
+            if (pw == user_pw) {
+                document.write (user + "님, 반갑습니다.");
+            } else {
+                alert ("비밀번호가 틀렸습니다.");
+                location.reload ();
+            }
+        } else {
+            alert ("아이디가 틀렸습니다.");
+            location.reload ();
+        }
+
+</script>
+    <style>
+        * {color: white; font-size: 30px;}
+        body {background: darkslategrey;}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
